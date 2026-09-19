@@ -1,6 +1,10 @@
-# skillpick
+<p align="center">
+  <img src="assets/logo.svg" width="128" height="128" alt="skillpick logo: a grid of skill tiles with one picked and lit">
+</p>
 
-Pick the right skill for every prompt, before your coding agent starts guessing.
+<h1 align="center">skillpick</h1>
+
+<p align="center">Pick the right skill for every prompt, before your coding agent starts guessing.</p>
 
 If you have installed more than a handful of agent skills (`SKILL.md` folders for
 Claude Code, Codex, Cursor, Gemini CLI and friends), you have probably noticed two
