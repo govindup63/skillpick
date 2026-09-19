@@ -1,0 +1,25 @@
+{
+  "name": "skillpick",
+  "version": "0.1.0",
+  "description": "Pick the right agent skill for each prompt with TypeSafe's Jev, and inject it into Claude Code via a hook",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "skillpick": "./src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test",
+    "typecheck": "bunx tsc --noEmit"
+  },
+  "keywords": ["claude-code", "codex", "skills", "typesafe", "jev", "hook"],
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  }
+}
