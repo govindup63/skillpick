@@ -10,7 +10,8 @@
   "scripts": {
     "start": "bun run src/cli.ts",
     "test": "bun test",
-    "typecheck": "bunx tsc --noEmit"
+    "typecheck": "bunx tsc --noEmit",
+    "bench": "bun run bench/run.ts --out bench/results.json"
   },
   "keywords": ["claude-code", "codex", "skills", "typesafe", "jev", "hook"],
   "dependencies": {

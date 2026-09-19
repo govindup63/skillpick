@@ -1,0 +1,4054 @@
+{
+  "skills": 140,
+  "config": {
+    "apiKey": "apikey_23264788a0ac6a49febc643f28b27cae96_12958d0eaeac2d57e17f6ca0e78966e14a82cba4d9f0cc2cf1b9145873f7afe6",
+    "model": "jev-latest",
+    "shortlist": 3,
+    "excerptChars": 700,
+    "gateThreshold": 0.3,
+    "fitsThreshold": 0.3,
+    "extraDirs": [],
+    "disabled": false
+  },
+  "raws": [
+    {
+      "text": "review my PR before I merge it",
+      "gold": "review",
+      "ranked": [
+        {
+          "name": "review",
+          "probability": 1
+        },
+        {
+          "name": "reference-to-3d",
+          "probability": 0
+        },
+        {
+          "name": "clean-space",
+          "probability": 0
+        },
+        {
+          "name": "orbital-hud-motion",
+          "probability": 0
+        },
+        {
+          "name": "source-part-segmentation",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7566666666666667,
+      "winner": "review",
+      "fits": {
+        "review": 0.98,
+        "reference-to-3d": 0.01,
+        "clean-space": 0.02
+      },
+      "ms1": 1451,
+      "ms2": 333,
+      "tokens1": 16339,
+      "tokens2": 1647
+    },
+    {
+      "text": "can you look over the diff on this branch against main and tell me if anything is unsafe before landing",
+      "gold": "review",
+      "ranked": [
+        {
+          "name": "review",
+          "probability": 1
+        },
+        {
+          "name": "setup-browser-cookies",
+          "probability": 0
+        },
+        {
+          "name": "high-end-visual-design",
+          "probability": 0
+        },
+        {
+          "name": "contour-to-mesh",
+          "probability": 0
+        },
+        {
+          "name": "doc-coauthoring",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7166666666666667,
+      "winner": "review",
+      "fits": {
+        "review": 0.97,
+        "setup-browser-cookies": 0.01,
+        "high-end-visual-design": 0.01
+      },
+      "ms1": 1452,
+      "ms2": 366,
+      "tokens1": 16352,
+      "tokens2": 1518
+    },
+    {
+      "text": "ship it: merge base, run tests, bump the version and open the PR",
+      "gold": "ship",
+      "ranked": [
+        {
+          "name": "ship",
+          "probability": 1
+        },
+        {
+          "name": "freeze",
+          "probability": 0
+        },
+        {
+          "name": "open-gstack-browser",
+          "probability": 0
+        },
+        {
+          "name": "template-skill",
+          "probability": 0
+        },
+        {
+          "name": "hyperframes",
+          "probability": 0
+        }
+      ],
+      "gate": 0.89,
+      "winner": "ship",
+      "fits": {
+        "ship": 0.93,
+        "freeze": 0.02,
+        "open-gstack-browser": 0.03
+      },
+      "ms1": 1428,
+      "ms2": 389,
+      "tokens1": 16348,
+      "tokens2": 1718
+    },
+    {
+      "text": "merge the PR, wait for CI and the deploy, then check production is fine",
+      "gold": "land-and-deploy",
+      "ranked": [
+        {
+          "name": "land-and-deploy",
+          "probability": 1
+        },
+        {
+          "name": "freeze",
+          "probability": 0
+        },
+        {
+          "name": "theme-factory",
+          "probability": 0
+        },
+        {
+          "name": "blender-modeling",
+          "probability": 0
+        },
+        {
+          "name": "brand-guidelines",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8833333333333333,
+      "winner": "land-and-deploy",
+      "fits": {
+        "land-and-deploy": 0.95,
+        "freeze": 0.02,
+        "theme-factory": 0.01
+      },
+      "ms1": 1482,
+      "ms2": 338,
+      "tokens1": 16348,
+      "tokens2": 1455
+    },
+    {
+      "text": "we just deployed, watch the live site for a few minutes for console errors or perf regressions",
+      "gold": "canary",
+      "ranked": [
+        {
+          "name": "canary",
+          "probability": 1
+        },
+        {
+          "name": "source-part-segmentation",
+          "probability": 0
+        },
+        {
+          "name": "doc-coauthoring",
+          "probability": 0
+        },
+        {
+          "name": "reference-analysis-validator",
+          "probability": 0
+        },
+        {
+          "name": "blender-uv-texturing",
+          "probability": 0
+        }
+      ],
+      "gate": 0.75,
+      "winner": "canary",
+      "fits": {
+        "canary": 0.96,
+        "source-part-segmentation": 0.01,
+        "doc-coauthoring": 0.01
+      },
+      "ms1": 693,
+      "ms2": 368,
+      "tokens1": 16352,
+      "tokens2": 1430
+    },
+    {
+      "text": "go through my web app, find bugs and fix them",
+      "gold": "qa",
+      "ranked": [
+        {
+          "name": "qa",
+          "probability": 1
+        },
+        {
+          "name": "benchmark",
+          "probability": 0
+        },
+        {
+          "name": "superset-feedback",
+          "probability": 0
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0
+        },
+        {
+          "name": "slack-gif-creator",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8733333333333334,
+      "winner": "qa",
+      "fits": {
+        "qa": 0.97,
+        "benchmark": 0.04,
+        "superset-feedback": 0.05
+      },
+      "ms1": 746,
+      "ms2": 337,
+      "tokens1": 16343,
+      "tokens2": 1759
+    },
+    {
+      "text": "test the web app systematically and give me a written report of what is broken, do not fix anything",
+      "gold": "qa-only",
+      "ranked": [
+        {
+          "name": "qa-only",
+          "probability": 0.99
+        },
+        {
+          "name": "webapp-testing",
+          "probability": 0.01
+        },
+        {
+          "name": "atlas-uv-fitting",
+          "probability": 0
+        },
+        {
+          "name": "brandkit",
+          "probability": 0
+        },
+        {
+          "name": "verify-before-done",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8433333333333333,
+      "winner": "qa-only",
+      "fits": {
+        "qa-only": 0.97,
+        "webapp-testing": 0.78,
+        "atlas-uv-fitting": 0.01
+      },
+      "ms1": 692,
+      "ms2": 367,
+      "tokens1": 16352,
+      "tokens2": 1445
+    },
+    {
+      "text": "open https://example.com in the headless browser, click the pricing link and tell me what the page says",
+      "gold": "browse",
+      "ranked": [
+        {
+          "name": "browse",
+          "probability": 0.54
+        },
+        {
+          "name": "superset-browser",
+          "probability": 0.4
+        },
+        {
+          "name": "gstack",
+          "probability": 0.05
+        },
+        {
+          "name": "devex-review",
+          "probability": 0
+        },
+        {
+          "name": "reference-analysis-validator",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7933333333333333,
+      "winner": "browse",
+      "fits": {
+        "browse": 0.95,
+        "superset-browser": 0.94,
+        "gstack": 0.92
+      },
+      "ms1": 742,
+      "ms2": 346,
+      "tokens1": 16355,
+      "tokens2": 1763
+    },
+    {
+      "text": "check whether this PR made page load or web vitals worse compared to main",
+      "gold": "benchmark",
+      "ranked": [
+        {
+          "name": "benchmark",
+          "probability": 1
+        },
+        {
+          "name": "learn",
+          "probability": 0
+        },
+        {
+          "name": "office-hours",
+          "probability": 0
+        },
+        {
+          "name": "source-part-segmentation",
+          "probability": 0
+        },
+        {
+          "name": "ui-craft",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7966666666666667,
+      "winner": "benchmark",
+      "fits": {
+        "benchmark": 0.96,
+        "learn": 0.03,
+        "office-hours": 0.01
+      },
+      "ms1": 426,
+      "ms2": 340,
+      "tokens1": 16347,
+      "tokens2": 1874
+    },
+    {
+      "text": "give me a code quality dashboard: run the type checker, linter and tests and summarise",
+      "gold": "health",
+      "ranked": [
+        {
+          "name": "health",
+          "probability": 1
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0
+        },
+        {
+          "name": "canary",
+          "probability": 0
+        },
+        {
+          "name": "superset-feedback",
+          "probability": 0
+        },
+        {
+          "name": "setup-browser-cookies",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8166666666666668,
+      "winner": "health",
+      "fits": {
+        "health": 0.94,
+        "academy-guide": 0.04,
+        "canary": 0.03
+      },
+      "ms1": 425,
+      "ms2": 344,
+      "tokens1": 16352,
+      "tokens2": 1862
+    },
+    {
+      "text": "the login endpoint sometimes returns 500 and I can't figure out why, dig into the root cause",
+      "gold": "investigate",
+      "ranked": [
+        {
+          "name": "investigate",
+          "probability": 1
+        },
+        {
+          "name": "reference-look-calibration",
+          "probability": 0
+        },
+        {
+          "name": "benchmark-models",
+          "probability": 0
+        },
+        {
+          "name": "contour-to-mesh",
+          "probability": 0
+        },
+        {
+          "name": "docx",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7066666666666667,
+      "winner": "investigate",
+      "fits": {
+        "investigate": 0.98,
+        "reference-look-calibration": 0.01,
+        "benchmark-models": 0.01
+      },
+      "ms1": 406,
+      "ms2": 323,
+      "tokens1": 16354,
+      "tokens2": 1786
+    },
+    {
+      "text": "do a weekly engineering retro from our commit history",
+      "gold": "retro",
+      "ranked": [
+        {
+          "name": "retro",
+          "probability": 1
+        },
+        {
+          "name": "blender-rendering",
+          "probability": 0
+        },
+        {
+          "name": "clean-space",
+          "probability": 0
+        },
+        {
+          "name": "landing-report",
+          "probability": 0
+        },
+        {
+          "name": "design-review",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7966666666666667,
+      "winner": "retro",
+      "fits": {
+        "retro": 0.97,
+        "blender-rendering": 0.01,
+        "clean-space": 0.01
+      },
+      "ms1": 497,
+      "ms2": 403,
+      "tokens1": 16341,
+      "tokens2": 1655
+    },
+    {
+      "text": "do a security audit of this infra: leaked secrets, open ports, IAM, the works",
+      "gold": "cso",
+      "ranked": [
+        {
+          "name": "cso",
+          "probability": 1
+        },
+        {
+          "name": "office-hours",
+          "probability": 0
+        },
+        {
+          "name": "reference-analysis-validator",
+          "probability": 0
+        },
+        {
+          "name": "image-to-code",
+          "probability": 0
+        },
+        {
+          "name": "verify-before-done",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8933333333333332,
+      "winner": "cso",
+      "fits": {
+        "cso": 0.95,
+        "office-hours": 0.01,
+        "reference-analysis-validator": 0.01
+      },
+      "ms1": 417,
+      "ms2": 378,
+      "tokens1": 16350,
+      "tokens2": 1948
+    },
+    {
+      "text": "turn on guardrails so you warn me before any rm -rf or DROP TABLE",
+      "gold": "careful",
+      "ranked": [
+        {
+          "name": "careful",
+          "probability": 0.89
+        },
+        {
+          "name": "guard",
+          "probability": 0.11
+        },
+        {
+          "name": "claude-api",
+          "probability": 0
+        },
+        {
+          "name": "open-gstack-browser",
+          "probability": 0
+        },
+        {
+          "name": "orbital-hud-motion",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5599999999999999,
+      "winner": "careful",
+      "fits": {
+        "careful": 0.96,
+        "guard": 0.88,
+        "claude-api": 0.1
+      },
+      "ms1": 413,
+      "ms2": 423,
+      "tokens1": 16349,
+      "tokens2": 1988
+    },
+    {
+      "text": "only allow edits inside src/api for the rest of this session",
+      "gold": "freeze",
+      "ranked": [
+        {
+          "name": "freeze",
+          "probability": 0.99
+        },
+        {
+          "name": "guard",
+          "probability": 0.01
+        },
+        {
+          "name": "plan-eng-review",
+          "probability": 0
+        },
+        {
+          "name": "review",
+          "probability": 0
+        },
+        {
+          "name": "design-taste-frontend",
+          "probability": 0
+        }
+      ],
+      "gate": 0.66,
+      "winner": "freeze",
+      "fits": {
+        "freeze": 0.96,
+        "guard": 0.87,
+        "plan-eng-review": 0.03
+      },
+      "ms1": 452,
+      "ms2": 329,
+      "tokens1": 16344,
+      "tokens2": 1632
+    },
+    {
+      "text": "ok lift the edit restriction, you can touch any directory again",
+      "gold": "unfreeze",
+      "ranked": [
+        {
+          "name": "unfreeze",
+          "probability": 1
+        },
+        {
+          "name": "plan-design-review",
+          "probability": 0
+        },
+        {
+          "name": "blender-pro-workflow",
+          "probability": 0
+        },
+        {
+          "name": "imagegen-frontend-mobile",
+          "probability": 0
+        },
+        {
+          "name": "frontend-design",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8133333333333335,
+      "winner": "unfreeze",
+      "fits": {
+        "unfreeze": 0.95,
+        "plan-design-review": 0.02,
+        "blender-pro-workflow": 0.01
+      },
+      "ms1": 570,
+      "ms2": 387,
+      "tokens1": 16344,
+      "tokens2": 1706
+    },
+    {
+      "text": "save where we are: git state, decisions, and what's left, so I can pick this up tomorrow",
+      "gold": "context-save",
+      "ranked": [
+        {
+          "name": "context-save",
+          "probability": 1
+        },
+        {
+          "name": "find-skills",
+          "probability": 0
+        },
+        {
+          "name": "setup-gbrain",
+          "probability": 0
+        },
+        {
+          "name": "validate-idea",
+          "probability": 0
+        },
+        {
+          "name": "review",
+          "probability": 0
+        }
+      ],
+      "gate": 0.73,
+      "winner": "context-save",
+      "fits": {
+        "context-save": 0.98,
+        "find-skills": 0.06,
+        "setup-gbrain": 0.02
+      },
+      "ms1": 470,
+      "ms2": 349,
+      "tokens1": 16354,
+      "tokens2": 1635
+    },
+    {
+      "text": "load the context I saved yesterday and continue",
+      "gold": "context-restore",
+      "ranked": [
+        {
+          "name": "context-restore",
+          "probability": 1
+        },
+        {
+          "name": "typesafe-ai",
+          "probability": 0
+        },
+        {
+          "name": "internal-comms",
+          "probability": 0
+        },
+        {
+          "name": "texture-driven-mesh-fitting",
+          "probability": 0
+        },
+        {
+          "name": "superset-automate",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7866666666666667,
+      "winner": "context-restore",
+      "fits": {
+        "context-restore": 0.95,
+        "typesafe-ai": 0.08,
+        "internal-comms": 0.03
+      },
+      "ms1": 448,
+      "ms2": 362,
+      "tokens1": 16340,
+      "tokens2": 1602
+    },
+    {
+      "text": "review this plan like an eng manager: architecture, data flow, what could go wrong in execution",
+      "gold": "plan-eng-review",
+      "ranked": [
+        {
+          "name": "plan-eng-review",
+          "probability": 1
+        },
+        {
+          "name": "hyperframes-media",
+          "probability": 0
+        },
+        {
+          "name": "design-dna",
+          "probability": 0
+        },
+        {
+          "name": "docx",
+          "probability": 0
+        },
+        {
+          "name": "setup-browser-cookies",
+          "probability": 0
+        }
+      ],
+      "gate": 0.39999999999999997,
+      "winner": "plan-eng-review",
+      "fits": {
+        "plan-eng-review": 0.97,
+        "hyperframes-media": 0.02,
+        "design-dna": 0.02
+      },
+      "ms1": 416,
+      "ms2": 404,
+      "tokens1": 16351,
+      "tokens2": 1867
+    },
+    {
+      "text": "look at this plan as a founder would, is there a 10x better product hiding in here",
+      "gold": "plan-ceo-review",
+      "ranked": [
+        {
+          "name": "plan-ceo-review",
+          "probability": 0.97
+        },
+        {
+          "name": "office-hours",
+          "probability": 0.02
+        },
+        {
+          "name": "autoplan",
+          "probability": 0.01
+        },
+        {
+          "name": "source-part-segmentation",
+          "probability": 0
+        },
+        {
+          "name": "doc-coauthoring",
+          "probability": 0
+        }
+      ],
+      "gate": 0.34,
+      "winner": "plan-ceo-review",
+      "fits": {
+        "plan-ceo-review": 0.95,
+        "office-hours": 0.68,
+        "autoplan": 0.2
+      },
+      "ms1": 423,
+      "ms2": 304,
+      "tokens1": 16353,
+      "tokens2": 2126
+    },
+    {
+      "text": "rate each part of this plan with a designer's eye before we build",
+      "gold": "plan-design-review",
+      "ranked": [
+        {
+          "name": "plan-design-review",
+          "probability": 0.99
+        },
+        {
+          "name": "design-review",
+          "probability": 0.01
+        },
+        {
+          "name": "slack-gif-creator",
+          "probability": 0
+        },
+        {
+          "name": "design-html",
+          "probability": 0
+        },
+        {
+          "name": "hyperframes-media",
+          "probability": 0
+        }
+      ],
+      "gate": 0.4166666666666667,
+      "winner": "plan-design-review",
+      "fits": {
+        "plan-design-review": 0.95,
+        "design-review": 0.88,
+        "slack-gif-creator": 0.02
+      },
+      "ms1": 442,
+      "ms2": 320,
+      "tokens1": 16346,
+      "tokens2": 1740
+    },
+    {
+      "text": "QA the visuals of this page: spacing, hierarchy, inconsistencies",
+      "gold": "design-review",
+      "ranked": [
+        {
+          "name": "design-review",
+          "probability": 0.99
+        },
+        {
+          "name": "qa",
+          "probability": 0.01
+        },
+        {
+          "name": "texture-driven-mesh-fitting",
+          "probability": 0
+        },
+        {
+          "name": "texture-state-animation",
+          "probability": 0
+        },
+        {
+          "name": "context-save",
+          "probability": 0
+        }
+      ],
+      "gate": 0.57,
+      "winner": "design-review",
+      "fits": {
+        "design-review": 0.97,
+        "qa": 0.78,
+        "texture-driven-mesh-fitting": 0.02
+      },
+      "ms1": 462,
+      "ms2": 338,
+      "tokens1": 16348,
+      "tokens2": 1856
+    },
+    {
+      "text": "make a landing page for my startup with a bold distinctive visual style, no generic AI look",
+      "gold": "design-taste-frontend",
+      "ranked": [
+        {
+          "name": "hallmark",
+          "probability": 0.39
+        },
+        {
+          "name": "design-taste-frontend",
+          "probability": 0.36
+        },
+        {
+          "name": "scrollcraft",
+          "probability": 0.12
+        },
+        {
+          "name": "ui-craft",
+          "probability": 0.1
+        },
+        {
+          "name": "imagegen-frontend-web",
+          "probability": 0.01
+        }
+      ],
+      "gate": 0.3833333333333333,
+      "winner": "design-taste-frontend",
+      "fits": {
+        "hallmark": 0.91,
+        "design-taste-frontend": 0.93,
+        "scrollcraft": 0.81
+      },
+      "ms1": 420,
+      "ms2": 363,
+      "tokens1": 16350,
+      "tokens2": 1706
+    },
+    {
+      "text": "audit this existing page for AI slop design patterns and tell me what to change",
+      "gold": "hallmark",
+      "ranked": [
+        {
+          "name": "design-review",
+          "probability": 0.58
+        },
+        {
+          "name": "hallmark",
+          "probability": 0.3
+        },
+        {
+          "name": "redesign-existing-projects",
+          "probability": 0.09999999999999999
+        },
+        {
+          "name": "design-taste-frontend",
+          "probability": 0.02
+        },
+        {
+          "name": "benchmark",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5733333333333334,
+      "winner": "design-review",
+      "fits": {
+        "design-review": 0.95,
+        "hallmark": 0.9,
+        "redesign-existing-projects": 0.95
+      },
+      "ms1": 451,
+      "ms2": 318,
+      "tokens1": 16348,
+      "tokens2": 1505
+    },
+    {
+      "text": "build a scroll-driven interactive landing page for a dental clinic",
+      "gold": "scrollcraft",
+      "ranked": [
+        {
+          "name": "scrollcraft",
+          "probability": 1
+        },
+        {
+          "name": "guard",
+          "probability": 0
+        },
+        {
+          "name": "gpt-taste",
+          "probability": 0
+        },
+        {
+          "name": "freeze",
+          "probability": 0
+        },
+        {
+          "name": "quality-refinement-autoloop",
+          "probability": 0
+        }
+      ],
+      "gate": 0.45,
+      "winner": "scrollcraft",
+      "fits": {
+        "scrollcraft": 0.95,
+        "guard": 0.02,
+        "gpt-taste": 0.63
+      },
+      "ms1": 432,
+      "ms2": 322,
+      "tokens1": 16343,
+      "tokens2": 1786
+    },
+    {
+      "text": "upgrade my existing dashboard app to a premium look, audit what's there first",
+      "gold": "redesign-existing-projects",
+      "ranked": [
+        {
+          "name": "redesign-existing-projects",
+          "probability": 0.9400000000000001
+        },
+        {
+          "name": "ui-craft",
+          "probability": 0.02
+        },
+        {
+          "name": "design-review",
+          "probability": 0.01
+        },
+        {
+          "name": "hallmark",
+          "probability": 0.01
+        },
+        {
+          "name": "design-taste-frontend",
+          "probability": 0.01
+        }
+      ],
+      "gate": 0.7000000000000001,
+      "winner": "redesign-existing-projects",
+      "fits": {
+        "redesign-existing-projects": 0.97,
+        "ui-craft": 0.88,
+        "design-review": 0.94
+      },
+      "ms1": 428,
+      "ms2": 321,
+      "tokens1": 16347,
+      "tokens2": 1545
+    },
+    {
+      "text": "design the settings screen in a clean editorial style, warm monochrome, typographic contrast",
+      "gold": "minimalist-ui",
+      "ranked": [
+        {
+          "name": "minimalist-ui",
+          "probability": 0.97
+        },
+        {
+          "name": "frontend-design",
+          "probability": 0.01
+        },
+        {
+          "name": "imagegen-frontend-mobile",
+          "probability": 0.01
+        },
+        {
+          "name": "ui-craft",
+          "probability": 0.01
+        },
+        {
+          "name": "superset-contribute",
+          "probability": 0
+        }
+      ],
+      "gate": 0.20999999999999996,
+      "winner": "minimalist-ui",
+      "fits": {
+        "minimalist-ui": 0.94,
+        "frontend-design": 0.94,
+        "imagegen-frontend-mobile": 0.9
+      },
+      "ms1": 477,
+      "ms2": 321,
+      "tokens1": 16352,
+      "tokens2": 1335
+    },
+    {
+      "text": "I want the admin panel to feel like a raw military terminal crossed with swiss print design",
+      "gold": "industrial-brutalist-ui",
+      "ranked": [
+        {
+          "name": "industrial-brutalist-ui",
+          "probability": 1
+        },
+        {
+          "name": "landing-report",
+          "probability": 0
+        },
+        {
+          "name": "benchmark",
+          "probability": 0
+        },
+        {
+          "name": "saasify",
+          "probability": 0
+        },
+        {
+          "name": "brand-guidelines",
+          "probability": 0
+        }
+      ],
+      "gate": 0.25,
+      "winner": "industrial-brutalist-ui",
+      "fits": {
+        "industrial-brutalist-ui": 0.95,
+        "landing-report": 0.02,
+        "benchmark": 0.01
+      },
+      "ms1": 421,
+      "ms2": 348,
+      "tokens1": 16350,
+      "tokens2": 1586
+    },
+    {
+      "text": "generate five different design variants of the hero section and open a comparison board so I can pick",
+      "gold": "design-shotgun",
+      "ranked": [
+        {
+          "name": "design-shotgun",
+          "probability": 1
+        },
+        {
+          "name": "algorithmic-art",
+          "probability": 0
+        },
+        {
+          "name": "document-release",
+          "probability": 0
+        },
+        {
+          "name": "blender-pro-workflow",
+          "probability": 0
+        },
+        {
+          "name": "closed-surface-uv-coverage",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5166666666666667,
+      "winner": "design-shotgun",
+      "fits": {
+        "design-shotgun": 0.97,
+        "algorithmic-art": 0.08,
+        "document-release": 0.01
+      },
+      "ms1": 448,
+      "ms2": 325,
+      "tokens1": 16350,
+      "tokens2": 1620
+    },
+    {
+      "text": "finalise the design into production HTML and CSS",
+      "gold": "design-html",
+      "ranked": [
+        {
+          "name": "design-html",
+          "probability": 1
+        },
+        {
+          "name": "reference-look-calibration",
+          "probability": 0
+        },
+        {
+          "name": "benchmark-models",
+          "probability": 0
+        },
+        {
+          "name": "contour-to-mesh",
+          "probability": 0
+        },
+        {
+          "name": "docx",
+          "probability": 0
+        }
+      ],
+      "gate": 0.6633333333333334,
+      "winner": "design-html",
+      "fits": {
+        "design-html": 0.96,
+        "reference-look-calibration": 0.02,
+        "benchmark-models": 0.01
+      },
+      "ms1": 448,
+      "ms2": 356,
+      "tokens1": 16342,
+      "tokens2": 1882
+    },
+    {
+      "text": "here is a screenshot of a website, turn it into working code that matches pixel for pixel",
+      "gold": "image-to-code",
+      "ranked": [
+        {
+          "name": "image-to-code",
+          "probability": 0.98
+        },
+        {
+          "name": "design-html",
+          "probability": 0.02
+        },
+        {
+          "name": "blender-modeling",
+          "probability": 0
+        },
+        {
+          "name": "template-skill",
+          "probability": 0
+        },
+        {
+          "name": "whatsapp-notify",
+          "probability": 0
+        }
+      ],
+      "gate": 0.6033333333333334,
+      "winner": "image-to-code",
+      "fits": {
+        "image-to-code": 0.91,
+        "design-html": 0.68,
+        "blender-modeling": 0.01
+      },
+      "ms1": 405,
+      "ms2": 326,
+      "tokens1": 16350,
+      "tokens2": 1955
+    },
+    {
+      "text": "convert this pdf report into a powerpoint deck",
+      "gold": "pptx",
+      "ranked": [
+        {
+          "name": "pptx",
+          "probability": 0.91
+        },
+        {
+          "name": "pdf",
+          "probability": 0.09
+        },
+        {
+          "name": "superset-contribute",
+          "probability": 0
+        },
+        {
+          "name": "contour-to-mesh",
+          "probability": 0
+        },
+        {
+          "name": "find-skills",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7666666666666666,
+      "winner": "pptx",
+      "fits": {
+        "pptx": 0.93,
+        "pdf": 0.3,
+        "superset-contribute": 0.01
+      },
+      "ms1": 401,
+      "ms2": 324,
+      "tokens1": 16343,
+      "tokens2": 1714
+    },
+    {
+      "text": "extract all the tables from these three PDFs into text",
+      "gold": "pdf",
+      "ranked": [
+        {
+          "name": "pdf",
+          "probability": 1
+        },
+        {
+          "name": "plan-eng-review",
+          "probability": 0
+        },
+        {
+          "name": "review",
+          "probability": 0
+        },
+        {
+          "name": "design-taste-frontend",
+          "probability": 0
+        },
+        {
+          "name": "source-part-segmentation",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8433333333333334,
+      "winner": "pdf",
+      "fits": {
+        "pdf": 0.97,
+        "plan-eng-review": 0.01,
+        "review": 0.01
+      },
+      "ms1": 483,
+      "ms2": 326,
+      "tokens1": 16342,
+      "tokens2": 1694
+    },
+    {
+      "text": "write the meeting minutes as a Word document with headings and a table",
+      "gold": "docx",
+      "ranked": [
+        {
+          "name": "docx",
+          "probability": 1
+        },
+        {
+          "name": "typesafe-ai",
+          "probability": 0
+        },
+        {
+          "name": "internal-comms",
+          "probability": 0
+        },
+        {
+          "name": "modern-python",
+          "probability": 0
+        },
+        {
+          "name": "superset-automate",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5166666666666667,
+      "winner": "docx",
+      "fits": {
+        "docx": 0.97,
+        "typesafe-ai": 0.05,
+        "internal-comms": 0.49
+      },
+      "ms1": 411,
+      "ms2": 327,
+      "tokens1": 16345,
+      "tokens2": 1732
+    },
+    {
+      "text": "build a spreadsheet that tracks monthly expenses with formulas for totals",
+      "gold": "xlsx",
+      "ranked": [
+        {
+          "name": "xlsx",
+          "probability": 1
+        },
+        {
+          "name": "glab",
+          "probability": 0
+        },
+        {
+          "name": "health",
+          "probability": 0
+        },
+        {
+          "name": "blender-modeling",
+          "probability": 0
+        },
+        {
+          "name": "platform-diag",
+          "probability": 0
+        }
+      ],
+      "gate": 0.3666666666666667,
+      "winner": "xlsx",
+      "fits": {
+        "xlsx": 0.94,
+        "glab": 0.01,
+        "health": 0.01
+      },
+      "ms1": 401,
+      "ms2": 346,
+      "tokens1": 16343,
+      "tokens2": 1749
+    },
+    {
+      "text": "turn README.md into a nicely typeset PDF with proper margins",
+      "gold": "make-pdf",
+      "ranked": [
+        {
+          "name": "make-pdf",
+          "probability": 0.99
+        },
+        {
+          "name": "pdf",
+          "probability": 0.01
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0
+        },
+        {
+          "name": "superset-feedback",
+          "probability": 0
+        },
+        {
+          "name": "slack-gif-creator",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8433333333333333,
+      "winner": "make-pdf",
+      "fits": {
+        "make-pdf": 0.97,
+        "pdf": 0.87,
+        "discernment-nudge": 0.05
+      },
+      "ms1": 401,
+      "ms2": 316,
+      "tokens1": 16344,
+      "tokens2": 1922
+    },
+    {
+      "text": "free up some disk space on my mac, it is full",
+      "gold": "clean-space",
+      "ranked": [
+        {
+          "name": "clean-space",
+          "probability": 1
+        },
+        {
+          "name": "high-end-visual-design",
+          "probability": 0
+        },
+        {
+          "name": "setup-browser-cookies",
+          "probability": 0
+        },
+        {
+          "name": "contour-to-mesh",
+          "probability": 0
+        },
+        {
+          "name": "doc-coauthoring",
+          "probability": 0
+        }
+      ],
+      "gate": 0.47333333333333333,
+      "winner": "clean-space",
+      "fits": {
+        "clean-space": 0.97,
+        "high-end-visual-design": 0.01,
+        "setup-browser-cookies": 0.01
+      },
+      "ms1": 421,
+      "ms2": 308,
+      "tokens1": 16344,
+      "tokens2": 1423
+    },
+    {
+      "text": "build a 3d model of a coffee mug in blender and render it",
+      "gold": "text-to-blender",
+      "ranked": [
+        {
+          "name": "text-to-blender",
+          "probability": 0.99
+        },
+        {
+          "name": "blender-pro-workflow",
+          "probability": 0.01
+        },
+        {
+          "name": "codex",
+          "probability": 0
+        },
+        {
+          "name": "canary",
+          "probability": 0
+        },
+        {
+          "name": "learn",
+          "probability": 0
+        }
+      ],
+      "gate": 0.59,
+      "winner": "text-to-blender",
+      "fits": {
+        "text-to-blender": 0.97,
+        "blender-pro-workflow": 0.89,
+        "codex": 0.03
+      },
+      "ms1": 421,
+      "ms2": 331,
+      "tokens1": 16347,
+      "tokens2": 2079
+    },
+    {
+      "text": "the blender scene looks flat, set up three point lighting with an HDRI",
+      "gold": "blender-lighting",
+      "ranked": [
+        {
+          "name": "blender-lighting",
+          "probability": 0.78
+        },
+        {
+          "name": "text-to-blender",
+          "probability": 0.22
+        },
+        {
+          "name": "landing-report",
+          "probability": 0
+        },
+        {
+          "name": "benchmark",
+          "probability": 0
+        },
+        {
+          "name": "saasify",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5766666666666668,
+      "winner": "blender-lighting",
+      "fits": {
+        "blender-lighting": 0.98,
+        "text-to-blender": 0.94,
+        "landing-report": 0.01
+      },
+      "ms1": 377,
+      "ms2": 440,
+      "tokens1": 16347,
+      "tokens2": 2031
+    },
+    {
+      "text": "export this blender scene as glb for the web",
+      "gold": "blender-export",
+      "ranked": [
+        {
+          "name": "blender-export",
+          "probability": 0.5700000000000001
+        },
+        {
+          "name": "text-to-blender",
+          "probability": 0.42
+        },
+        {
+          "name": "xlsx",
+          "probability": 0.01
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0
+        },
+        {
+          "name": "setup-browser-cookies",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7766666666666667,
+      "winner": "blender-export",
+      "fits": {
+        "blender-export": 0.98,
+        "text-to-blender": 0.91,
+        "xlsx": 0.01
+      },
+      "ms1": 417,
+      "ms2": 332,
+      "tokens1": 16342,
+      "tokens2": 2289
+    },
+    {
+      "text": "animate the camera orbiting the product over 5 seconds with keyframes in blender",
+      "gold": "blender-animation",
+      "ranked": [
+        {
+          "name": "blender-cameras",
+          "probability": 0.47000000000000003
+        },
+        {
+          "name": "blender-animation",
+          "probability": 0.32
+        },
+        {
+          "name": "text-to-blender",
+          "probability": 0.21000000000000002
+        },
+        {
+          "name": "devex-review",
+          "probability": 0
+        },
+        {
+          "name": "reference-analysis-validator",
+          "probability": 0
+        }
+      ],
+      "gate": 0.49666666666666665,
+      "winner": "blender-animation",
+      "fits": {
+        "blender-cameras": 0.97,
+        "blender-animation": 0.98,
+        "text-to-blender": 0.93
+      },
+      "ms1": 434,
+      "ms2": 381,
+      "tokens1": 16349,
+      "tokens2": 2142
+    },
+    {
+      "text": "I have front and side orthographic wireframe PNGs of a drone, convert them into a 3d blender model",
+      "gold": "wireframe-to-3d",
+      "ranked": [
+        {
+          "name": "wireframe-to-3d",
+          "probability": 0.98
+        },
+        {
+          "name": "reference-to-3d",
+          "probability": 0.01
+        },
+        {
+          "name": "text-to-blender",
+          "probability": 0.01
+        },
+        {
+          "name": "freeze",
+          "probability": 0
+        },
+        {
+          "name": "theme-factory",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8300000000000001,
+      "winner": "wireframe-to-3d",
+      "fits": {
+        "wireframe-to-3d": 0.98,
+        "reference-to-3d": 0.97,
+        "text-to-blender": 0.65
+      },
+      "ms1": 470,
+      "ms2": 446,
+      "tokens1": 16358,
+      "tokens2": 2207
+    },
+    {
+      "text": "build an MCP server that exposes our internal ticketing API as tools",
+      "gold": "mcp-builder",
+      "ranked": [
+        {
+          "name": "mcp-builder",
+          "probability": 1
+        },
+        {
+          "name": "blender-animation",
+          "probability": 0
+        },
+        {
+          "name": "fit-repair-optimizer",
+          "probability": 0
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0
+        },
+        {
+          "name": "plan-design-review",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7200000000000001,
+      "winner": "mcp-builder",
+      "fits": {
+        "mcp-builder": 0.95,
+        "blender-animation": 0.01,
+        "fit-repair-optimizer": 0.01
+      },
+      "ms1": 517,
+      "ms2": 712,
+      "tokens1": 16346,
+      "tokens2": 1546
+    },
+    {
+      "text": "what's the right model id and streaming setup for the anthropic sdk in python",
+      "gold": "claude-api",
+      "ranked": [
+        {
+          "name": "claude-api",
+          "probability": 1
+        },
+        {
+          "name": "mascot-logo-reconstruction",
+          "probability": 0
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0
+        },
+        {
+          "name": "text-to-blender",
+          "probability": 0
+        },
+        {
+          "name": "freeze",
+          "probability": 0
+        }
+      ],
+      "gate": 0.41333333333333333,
+      "winner": "claude-api",
+      "fits": {
+        "claude-api": 0.97,
+        "mascot-logo-reconstruction": 0.01,
+        "discernment-nudge": 0.14
+      },
+      "ms1": 889,
+      "ms2": 624,
+      "tokens1": 16349,
+      "tokens2": 2125
+    },
+    {
+      "text": "set up a new python project with uv, ruff and ty",
+      "gold": "modern-python",
+      "ranked": [
+        {
+          "name": "modern-python",
+          "probability": 1
+        },
+        {
+          "name": "high-end-visual-design",
+          "probability": 0
+        },
+        {
+          "name": "setup-browser-cookies",
+          "probability": 0
+        },
+        {
+          "name": "contour-to-mesh",
+          "probability": 0
+        },
+        {
+          "name": "superset-page",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5933333333333334,
+      "winner": "modern-python",
+      "fits": {
+        "modern-python": 0.97,
+        "high-end-visual-design": 0.01,
+        "setup-browser-cookies": 0.01
+      },
+      "ms1": 452,
+      "ms2": 339,
+      "tokens1": 16345,
+      "tokens2": 1348
+    },
+    {
+      "text": "create a merge request on gitlab from this branch and assign it to me",
+      "gold": "glab",
+      "ranked": [
+        {
+          "name": "glab",
+          "probability": 0.78
+        },
+        {
+          "name": "ship",
+          "probability": 0.22
+        },
+        {
+          "name": "blender-animation",
+          "probability": 0
+        },
+        {
+          "name": "skill-creator",
+          "probability": 0
+        },
+        {
+          "name": "superset-plugins",
+          "probability": 0
+        }
+      ],
+      "gate": 0.88,
+      "winner": "glab",
+      "fits": {
+        "glab": 0.91,
+        "ship": 0.75,
+        "blender-animation": 0.01
+      },
+      "ms1": 474,
+      "ms2": 338,
+      "tokens1": 16347,
+      "tokens2": 1712
+    },
+    {
+      "text": "manage my git worktrees with worktrunk, spin one up for the hotfix",
+      "gold": "worktrunk",
+      "ranked": [
+        {
+          "name": "worktrunk",
+          "probability": 1
+        },
+        {
+          "name": "blender-materials",
+          "probability": 0
+        },
+        {
+          "name": "design-dna",
+          "probability": 0
+        },
+        {
+          "name": "docx",
+          "probability": 0
+        },
+        {
+          "name": "setup-browser-cookies",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7433333333333333,
+      "winner": "worktrunk",
+      "fits": {
+        "worktrunk": 0.73,
+        "blender-materials": 0,
+        "design-dna": 0.01
+      },
+      "ms1": 1367,
+      "ms2": 342,
+      "tokens1": 16349,
+      "tokens2": 1902
+    },
+    {
+      "text": "create a new skill for our deployment checklist",
+      "gold": "skill-creator",
+      "ranked": [
+        {
+          "name": "skill-creator",
+          "probability": 0.99
+        },
+        {
+          "name": "xlsx",
+          "probability": 0.01
+        },
+        {
+          "name": "freeze",
+          "probability": 0
+        },
+        {
+          "name": "theme-factory",
+          "probability": 0
+        },
+        {
+          "name": "blender-modeling",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5099999999999999,
+      "winner": "skill-creator",
+      "fits": {
+        "skill-creator": 0.89,
+        "xlsx": 0.04,
+        "freeze": 0.05
+      },
+      "ms1": 463,
+      "ms2": 535,
+      "tokens1": 16340,
+      "tokens2": 1713
+    },
+    {
+      "text": "is there a skill for working with notion pages, how do I install one",
+      "gold": "find-skills",
+      "ranked": [
+        {
+          "name": "find-skills",
+          "probability": 0.99
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0.01
+        },
+        {
+          "name": "landing-report",
+          "probability": 0
+        },
+        {
+          "name": "benchmark",
+          "probability": 0
+        },
+        {
+          "name": "saasify",
+          "probability": 0
+        }
+      ],
+      "gate": 0.37333333333333335,
+      "winner": "find-skills",
+      "fits": {
+        "find-skills": 0.95,
+        "academy-guide": 0.46,
+        "landing-report": 0.01
+      },
+      "ms1": 887,
+      "ms2": 403,
+      "tokens1": 16347,
+      "tokens2": 1775
+    },
+    {
+      "text": "validate my business idea using the minimalist entrepreneur framework: a subscription for indie hackers",
+      "gold": "validate-idea",
+      "ranked": [
+        {
+          "name": "validate-idea",
+          "probability": 0.99
+        },
+        {
+          "name": "office-hours",
+          "probability": 0.01
+        },
+        {
+          "name": "text-to-blender",
+          "probability": 0
+        },
+        {
+          "name": "mascot-logo-reconstruction",
+          "probability": 0
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0
+        }
+      ],
+      "gate": 0.33,
+      "winner": "validate-idea",
+      "fits": {
+        "validate-idea": 0.98,
+        "office-hours": 0.91,
+        "text-to-blender": 0.01
+      },
+      "ms1": 419,
+      "ms2": 293,
+      "tokens1": 16347,
+      "tokens2": 1924
+    },
+    {
+      "text": "run YC style office hours on my startup, ask the hard questions about demand",
+      "gold": "office-hours",
+      "ranked": [
+        {
+          "name": "office-hours",
+          "probability": 1
+        },
+        {
+          "name": "whatsapp-notify",
+          "probability": 0
+        },
+        {
+          "name": "template-skill",
+          "probability": 0
+        },
+        {
+          "name": "blender-modeling",
+          "probability": 0
+        },
+        {
+          "name": "superset-automate",
+          "probability": 0
+        }
+      ],
+      "gate": 0.32,
+      "winner": "office-hours",
+      "fits": {
+        "office-hours": 0.94,
+        "whatsapp-notify": 0.01,
+        "template-skill": 0.13
+      },
+      "ms1": 422,
+      "ms2": 367,
+      "tokens1": 16347,
+      "tokens2": 1370
+    },
+    {
+      "text": "send me a whatsapp message when the build finishes",
+      "gold": "whatsapp-notify",
+      "ranked": [
+        {
+          "name": "whatsapp-notify",
+          "probability": 1
+        },
+        {
+          "name": "plan-devex-review",
+          "probability": 0
+        },
+        {
+          "name": "ship",
+          "probability": 0
+        },
+        {
+          "name": "careful",
+          "probability": 0
+        },
+        {
+          "name": "contour-to-mesh",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7766666666666667,
+      "winner": "whatsapp-notify",
+      "fits": {
+        "whatsapp-notify": 0.96,
+        "plan-devex-review": 0.01,
+        "ship": 0.03
+      },
+      "ms1": 421,
+      "ms2": 348,
+      "tokens1": 16341,
+      "tokens2": 1766
+    },
+    {
+      "text": "add a TypeSafe Jev call that classifies support tickets by department with probabilities",
+      "gold": "typesafe-ai",
+      "ranked": [
+        {
+          "name": "typesafe-ai",
+          "probability": 1
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0
+        },
+        {
+          "name": "setup-browser-cookies",
+          "probability": 0
+        },
+        {
+          "name": "superset-feedback",
+          "probability": 0
+        },
+        {
+          "name": "canary",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7300000000000001,
+      "winner": "typesafe-ai",
+      "fits": {
+        "typesafe-ai": 0.9,
+        "academy-guide": 0.05,
+        "setup-browser-cookies": 0.01
+      },
+      "ms1": 730,
+      "ms2": 395,
+      "tokens1": 16349,
+      "tokens2": 1842
+    },
+    {
+      "text": "make a 20 second title card video with captions and a voiceover",
+      "gold": "hyperframes",
+      "ranked": [
+        {
+          "name": "hyperframes",
+          "probability": 1
+        },
+        {
+          "name": "platform-diag",
+          "probability": 0
+        },
+        {
+          "name": "hallmark",
+          "probability": 0
+        },
+        {
+          "name": "devex-review",
+          "probability": 0
+        },
+        {
+          "name": "web-artifacts-builder",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5133333333333333,
+      "winner": "hyperframes",
+      "fits": {
+        "hyperframes": 0.96,
+        "platform-diag": 0,
+        "hallmark": 0.02
+      },
+      "ms1": 644,
+      "ms2": 364,
+      "tokens1": 16348,
+      "tokens2": 1776
+    },
+    {
+      "text": "generate some p5.js generative art with a seed and sliders",
+      "gold": "algorithmic-art",
+      "ranked": [
+        {
+          "name": "algorithmic-art",
+          "probability": 1
+        },
+        {
+          "name": "glab",
+          "probability": 0
+        },
+        {
+          "name": "health",
+          "probability": 0
+        },
+        {
+          "name": "blender-modeling",
+          "probability": 0
+        },
+        {
+          "name": "platform-diag",
+          "probability": 0
+        }
+      ],
+      "gate": 0.31333333333333335,
+      "winner": "algorithmic-art",
+      "fits": {
+        "algorithmic-art": 0.97,
+        "glab": 0,
+        "health": 0.01
+      },
+      "ms1": 409,
+      "ms2": 347,
+      "tokens1": 16345,
+      "tokens2": 1415
+    },
+    {
+      "text": "make an animated gif for slack that says deployed with confetti",
+      "gold": "slack-gif-creator",
+      "ranked": [
+        {
+          "name": "slack-gif-creator",
+          "probability": 1
+        },
+        {
+          "name": "reference-to-3d",
+          "probability": 0
+        },
+        {
+          "name": "autoplan",
+          "probability": 0
+        },
+        {
+          "name": "orbital-hud-motion",
+          "probability": 0
+        },
+        {
+          "name": "source-part-segmentation",
+          "probability": 0
+        }
+      ],
+      "gate": 0.5299999999999999,
+      "winner": "slack-gif-creator",
+      "fits": {
+        "slack-gif-creator": 0.94,
+        "reference-to-3d": 0.01,
+        "autoplan": 0.01
+      },
+      "ms1": 410,
+      "ms2": 318,
+      "tokens1": 16344,
+      "tokens2": 1806
+    },
+    {
+      "text": "coordinate three coding agents in parallel through superset, one per feature branch",
+      "gold": "superset-orchestrate",
+      "ranked": [
+        {
+          "name": "superset-orchestrate",
+          "probability": 1
+        },
+        {
+          "name": "ui-craft",
+          "probability": 0
+        },
+        {
+          "name": "review",
+          "probability": 0
+        },
+        {
+          "name": "setup-deploy",
+          "probability": 0
+        },
+        {
+          "name": "supacode-cli",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7433333333333333,
+      "winner": "superset-orchestrate",
+      "fits": {
+        "superset-orchestrate": 0.94,
+        "ui-craft": 0.05,
+        "review": 0.05
+      },
+      "ms1": 424,
+      "ms2": 370,
+      "tokens1": 16347,
+      "tokens2": 1581
+    },
+    {
+      "text": "superset says the host is offline and won't connect, diagnose it",
+      "gold": "superset-doctor",
+      "ranked": [
+        {
+          "name": "superset-doctor",
+          "probability": 1
+        },
+        {
+          "name": "plan-devex-review",
+          "probability": 0
+        },
+        {
+          "name": "ship",
+          "probability": 0
+        },
+        {
+          "name": "careful",
+          "probability": 0
+        },
+        {
+          "name": "contour-to-mesh",
+          "probability": 0
+        }
+      ],
+      "gate": 0.6233333333333334,
+      "winner": "superset-doctor",
+      "fits": {
+        "superset-doctor": 0.96,
+        "plan-devex-review": 0.01,
+        "ship": 0.02
+      },
+      "ms1": 532,
+      "ms2": 322,
+      "tokens1": 16347,
+      "tokens2": 1823
+    },
+    {
+      "text": "configure the deploy settings so land-and-deploy knows we use vercel",
+      "gold": "setup-deploy",
+      "ranked": [
+        {
+          "name": "setup-deploy",
+          "probability": 1
+        },
+        {
+          "name": "devex-review",
+          "probability": 0
+        },
+        {
+          "name": "reference-analysis-validator",
+          "probability": 0
+        },
+        {
+          "name": "plan-tune",
+          "probability": 0
+        },
+        {
+          "name": "blender-rendering",
+          "probability": 0
+        }
+      ],
+      "gate": 0.79,
+      "winner": "setup-deploy",
+      "fits": {
+        "setup-deploy": 0.95,
+        "devex-review": 0.02,
+        "reference-analysis-validator": 0.01
+      },
+      "ms1": 688,
+      "ms2": 332,
+      "tokens1": 16346,
+      "tokens2": 1806
+    },
+    {
+      "text": "before you say the change is done, actually run it and show me the evidence",
+      "gold": "verify-before-done",
+      "ranked": [
+        {
+          "name": "verify-before-done",
+          "probability": 0.99
+        },
+        {
+          "name": "browse",
+          "probability": 0.01
+        },
+        {
+          "name": "plan-eng-review",
+          "probability": 0
+        },
+        {
+          "name": "review",
+          "probability": 0
+        },
+        {
+          "name": "source-part-segmentation",
+          "probability": 0
+        }
+      ],
+      "gate": 0.8466666666666667,
+      "winner": "verify-before-done",
+      "fits": {
+        "verify-before-done": 0.92,
+        "browse": 0.87,
+        "plan-eng-review": 0.06
+      },
+      "ms1": 420,
+      "ms2": 393,
+      "tokens1": 16348,
+      "tokens2": 1679
+    },
+    {
+      "text": "explain what a monad is",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "discernment-nudge",
+          "probability": 0.31
+        },
+        {
+          "name": "codex",
+          "probability": 0.19
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0.17
+        },
+        {
+          "name": "claude-api",
+          "probability": 0.12
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.060000000000000005
+        }
+      ],
+      "gate": 0.06666666666666667,
+      "winner": "discernment-nudge",
+      "fits": {
+        "discernment-nudge": 0.08,
+        "codex": 0.14,
+        "academy-guide": 0.03
+      },
+      "ms1": 423,
+      "ms2": 359,
+      "tokens1": 16339,
+      "tokens2": 2111
+    },
+    {
+      "text": "what is the difference between TCP and UDP",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "discernment-nudge",
+          "probability": 0.54
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0.12
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.12
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.060000000000000005
+        },
+        {
+          "name": "codex",
+          "probability": 0.03
+        }
+      ],
+      "gate": 0.04333333333333334,
+      "winner": "discernment-nudge",
+      "fits": {
+        "discernment-nudge": 0.12,
+        "academy-guide": 0.03,
+        "find-skills": 0.04
+      },
+      "ms1": 524,
+      "ms2": 366,
+      "tokens1": 16340,
+      "tokens2": 1922
+    },
+    {
+      "text": "add a nice logo of this project",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "brandkit",
+          "probability": 0.85
+        },
+        {
+          "name": "canvas-design",
+          "probability": 0.12
+        },
+        {
+          "name": "mascot-logo-reconstruction",
+          "probability": 0.03
+        },
+        {
+          "name": "superset-10x",
+          "probability": 0
+        },
+        {
+          "name": "careful",
+          "probability": 0
+        }
+      ],
+      "gate": 0.66,
+      "winner": "brandkit",
+      "fits": {
+        "brandkit": 0.89,
+        "canvas-design": 0.83,
+        "mascot-logo-reconstruction": 0.22
+      },
+      "ms1": 433,
+      "ms2": 302,
+      "tokens1": 16339,
+      "tokens2": 1368
+    },
+    {
+      "text": "test this tool in someway and bechmark this and show me some stats",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "benchmark",
+          "probability": 0.32
+        },
+        {
+          "name": "skill-creator",
+          "probability": 0.31
+        },
+        {
+          "name": "qa",
+          "probability": 0.17
+        },
+        {
+          "name": "browse",
+          "probability": 0.060000000000000005
+        },
+        {
+          "name": "devex-review",
+          "probability": 0.04
+        }
+      ],
+      "gate": 0.7833333333333333,
+      "winner": "benchmark",
+      "fits": {
+        "benchmark": 0.82,
+        "skill-creator": 0.76,
+        "qa": 0.48
+      },
+      "ms1": 686,
+      "ms2": 516,
+      "tokens1": 16348,
+      "tokens2": 1767
+    },
+    {
+      "text": "rename the variable foo to bar in utils.ts",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "verify-before-done",
+          "probability": 0.48
+        },
+        {
+          "name": "codex",
+          "probability": 0.21000000000000002
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.08
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.04
+        },
+        {
+          "name": "review",
+          "probability": 0.02
+        }
+      ],
+      "gate": 0.7166666666666667,
+      "winner": "verify-before-done",
+      "fits": {
+        "verify-before-done": 0.19,
+        "codex": 0.1,
+        "discernment-nudge": 0.05
+      },
+      "ms1": 424,
+      "ms2": 315,
+      "tokens1": 16341,
+      "tokens2": 1776
+    },
+    {
+      "text": "write a unit test for the parseDate function",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "verify-before-done",
+          "probability": 0.2
+        },
+        {
+          "name": "qa",
+          "probability": 0.19
+        },
+        {
+          "name": "webapp-testing",
+          "probability": 0.17
+        },
+        {
+          "name": "modern-python",
+          "probability": 0.13
+        },
+        {
+          "name": "full-output-enforcement",
+          "probability": 0.06999999999999999
+        }
+      ],
+      "gate": 0.42,
+      "winner": "verify-before-done",
+      "fits": {
+        "verify-before-done": 0.2,
+        "qa": 0.12,
+        "webapp-testing": 0.14
+      },
+      "ms1": 420,
+      "ms2": 386,
+      "tokens1": 16341,
+      "tokens2": 1520
+    },
+    {
+      "text": "what does this regex do: ^(?=.*[A-Z])(?=.*\\d).{8,}$",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "discernment-nudge",
+          "probability": 0.28
+        },
+        {
+          "name": "codex",
+          "probability": 0.25
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0.17
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.08
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.05
+        }
+      ],
+      "gate": 0.05000000000000001,
+      "winner": "discernment-nudge",
+      "fits": {
+        "discernment-nudge": 0.18,
+        "codex": 0.2,
+        "academy-guide": 0.04
+      },
+      "ms1": 416,
+      "ms2": 391,
+      "tokens1": 16354,
+      "tokens2": 2126
+    },
+    {
+      "text": "post this announcement to my mastodon account",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "superset-browser",
+          "probability": 0.21000000000000002
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.21000000000000002
+        },
+        {
+          "name": "superset-computer",
+          "probability": 0.14
+        },
+        {
+          "name": "gstack",
+          "probability": 0.06999999999999999
+        },
+        {
+          "name": "whatsapp-notify",
+          "probability": 0.060000000000000005
+        }
+      ],
+      "gate": 0.8266666666666667,
+      "winner": "superset-browser",
+      "fits": {
+        "superset-browser": 0.47,
+        "find-skills": 0.09,
+        "superset-computer": 0.18
+      },
+      "ms1": 672,
+      "ms2": 335,
+      "tokens1": 16340,
+      "tokens2": 1586
+    },
+    {
+      "text": "add these three cards to our trello backlog",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "superset-computer",
+          "probability": 0.58
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.09
+        },
+        {
+          "name": "glab",
+          "probability": 0.060000000000000005
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.04
+        },
+        {
+          "name": "superset-browser",
+          "probability": 0.04
+        }
+      ],
+      "gate": 0.8066666666666666,
+      "winner": "superset-computer",
+      "fits": {
+        "superset-computer": 0.15,
+        "find-skills": 0.04,
+        "glab": 0.02
+      },
+      "ms1": 413,
+      "ms2": 308,
+      "tokens1": 16341,
+      "tokens2": 1444
+    },
+    {
+      "text": "book me a table for two at 8pm tonight",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "superset-computer",
+          "probability": 0.21000000000000002
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.19
+        },
+        {
+          "name": "superset-browser",
+          "probability": 0.19
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.09999999999999999
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.06999999999999999
+        }
+      ],
+      "gate": 0.64,
+      "winner": "superset-browser",
+      "fits": {
+        "superset-computer": 0.06,
+        "find-skills": 0.03,
+        "superset-browser": 0.13
+      },
+      "ms1": 409,
+      "ms2": 322,
+      "tokens1": 16343,
+      "tokens2": 1589
+    },
+    {
+      "text": "translate this paragraph into hindi",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "claude-api",
+          "probability": 0.48
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.19
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.08
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.06999999999999999
+        },
+        {
+          "name": "internal-comms",
+          "probability": 0.02
+        }
+      ],
+      "gate": 0.23,
+      "winner": "template-skill",
+      "fits": {
+        "claude-api": 0.13,
+        "find-skills": 0.05,
+        "template-skill": 0.09
+      },
+      "ms1": 430,
+      "ms2": 323,
+      "tokens1": 16337,
+      "tokens2": 1571
+    },
+    {
+      "text": "how do I center a div",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "academy-guide",
+          "probability": 0.27
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.24000000000000002
+        },
+        {
+          "name": "ui-craft",
+          "probability": 0.13
+        },
+        {
+          "name": "design-html",
+          "probability": 0.13
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.06999999999999999
+        }
+      ],
+      "gate": 0.11333333333333336,
+      "winner": "ui-craft",
+      "fits": {
+        "academy-guide": 0.06,
+        "find-skills": 0.21,
+        "ui-craft": 0.5
+      },
+      "ms1": 418,
+      "ms2": 366,
+      "tokens1": 16338,
+      "tokens2": 1676
+    },
+    {
+      "text": "fix the typo in the README",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "document-release",
+          "probability": 0.87
+        },
+        {
+          "name": "doc-coauthoring",
+          "probability": 0.060000000000000005
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.02
+        },
+        {
+          "name": "verify-before-done",
+          "probability": 0.02
+        },
+        {
+          "name": "investigate",
+          "probability": 0.02
+        }
+      ],
+      "gate": 0.65,
+      "winner": "document-release",
+      "fits": {
+        "document-release": 0.19,
+        "doc-coauthoring": 0.11,
+        "template-skill": 0.1
+      },
+      "ms1": 496,
+      "ms2": 355,
+      "tokens1": 16338,
+      "tokens2": 1228
+    },
+    {
+      "text": "what's a good name for a cat",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "discernment-nudge",
+          "probability": 0.75
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.09
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.08
+        },
+        {
+          "name": "office-hours",
+          "probability": 0.02
+        },
+        {
+          "name": "claude-api",
+          "probability": 0.02
+        }
+      ],
+      "gate": 0.03666666666666668,
+      "winner": "discernment-nudge",
+      "fits": {
+        "discernment-nudge": 0.16,
+        "template-skill": 0.11,
+        "find-skills": 0.03
+      },
+      "ms1": 940,
+      "ms2": 395,
+      "tokens1": 16340,
+      "tokens2": 1351
+    },
+    {
+      "text": "summarise this article in three bullet points",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "claude-api",
+          "probability": 0.72
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.06999999999999999
+        },
+        {
+          "name": "superset-browser",
+          "probability": 0.05
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.04
+        },
+        {
+          "name": "pdf",
+          "probability": 0.04
+        }
+      ],
+      "gate": 0.37000000000000005,
+      "winner": "claude-api",
+      "fits": {
+        "claude-api": 0.48,
+        "discernment-nudge": 0.11,
+        "superset-browser": 0.07
+      },
+      "ms1": 830,
+      "ms2": 604,
+      "tokens1": 16341,
+      "tokens2": 2228
+    },
+    {
+      "text": "convert this json to yaml",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "discernment-nudge",
+          "probability": 0.51
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.11
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.08
+        },
+        {
+          "name": "codex",
+          "probability": 0.06999999999999999
+        },
+        {
+          "name": "claude-api",
+          "probability": 0.05
+        }
+      ],
+      "gate": 0.47333333333333333,
+      "winner": "discernment-nudge",
+      "fits": {
+        "discernment-nudge": 0.11,
+        "find-skills": 0.06,
+        "template-skill": 0.12
+      },
+      "ms1": 385,
+      "ms2": 314,
+      "tokens1": 16337,
+      "tokens2": 1348
+    },
+    {
+      "text": "why is my docker build so slow",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "investigate",
+          "probability": 0.77
+        },
+        {
+          "name": "clean-space",
+          "probability": 0.15000000000000002
+        },
+        {
+          "name": "benchmark",
+          "probability": 0.04
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.02
+        },
+        {
+          "name": "devex-review",
+          "probability": 0.01
+        }
+      ],
+      "gate": 0.3233333333333333,
+      "winner": "investigate",
+      "fits": {
+        "investigate": 0.74,
+        "clean-space": 0.1,
+        "benchmark": 0.05
+      },
+      "ms1": 714,
+      "ms2": 560,
+      "tokens1": 16339,
+      "tokens2": 1681
+    },
+    {
+      "text": "write a haiku about compilers",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "discernment-nudge",
+          "probability": 0.6900000000000001
+        },
+        {
+          "name": "claude-api",
+          "probability": 0.09
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.09
+        },
+        {
+          "name": "canvas-design",
+          "probability": 0.03
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.02
+        }
+      ],
+      "gate": 0.05666666666666665,
+      "winner": "template-skill",
+      "fits": {
+        "discernment-nudge": 0.12,
+        "claude-api": 0.33,
+        "template-skill": 0.13
+      },
+      "ms1": 673,
+      "ms2": 631,
+      "tokens1": 16339,
+      "tokens2": 1849
+    },
+    {
+      "text": "upgrade react from 18 to 19 in package.json and fix the breaking changes",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "investigate",
+          "probability": 0.4
+        },
+        {
+          "name": "verify-before-done",
+          "probability": 0.17
+        },
+        {
+          "name": "qa",
+          "probability": 0.08
+        },
+        {
+          "name": "web-artifacts-builder",
+          "probability": 0.08
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.060000000000000005
+        }
+      ],
+      "gate": 0.8333333333333334,
+      "winner": "verify-before-done",
+      "fits": {
+        "investigate": 0.2,
+        "verify-before-done": 0.4,
+        "qa": 0.17
+      },
+      "ms1": 682,
+      "ms2": 322,
+      "tokens1": 16350,
+      "tokens2": 1789
+    },
+    {
+      "text": "add a dark mode toggle to the navbar",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "ui-craft",
+          "probability": 0.73
+        },
+        {
+          "name": "frontend-design",
+          "probability": 0.06999999999999999
+        },
+        {
+          "name": "design-html",
+          "probability": 0.06999999999999999
+        },
+        {
+          "name": "theme-factory",
+          "probability": 0.060000000000000005
+        },
+        {
+          "name": "web-artifacts-builder",
+          "probability": 0.04
+        }
+      ],
+      "gate": 0.6133333333333334,
+      "winner": "design-html",
+      "fits": {
+        "ui-craft": 0.75,
+        "frontend-design": 0.28,
+        "design-html": 0.31
+      },
+      "ms1": 882,
+      "ms2": 432,
+      "tokens1": 16340,
+      "tokens2": 1586
+    },
+    {
+      "text": "set up a cron job that backs up the postgres db nightly",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "superset-automate",
+          "probability": 0.85
+        },
+        {
+          "name": "platform-diag",
+          "probability": 0.04
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.03
+        },
+        {
+          "name": "careful",
+          "probability": 0.03
+        },
+        {
+          "name": "superset-computer",
+          "probability": 0.02
+        }
+      ],
+      "gate": 0.6533333333333333,
+      "winner": "superset-automate",
+      "fits": {
+        "superset-automate": 0.42,
+        "platform-diag": 0.01,
+        "discernment-nudge": 0.13
+      },
+      "ms1": 1383,
+      "ms2": 484,
+      "tokens1": 16344,
+      "tokens2": 1872
+    },
+    {
+      "text": "send an email to the team about the outage",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "internal-comms",
+          "probability": 1
+        },
+        {
+          "name": "superset-10x",
+          "probability": 0
+        },
+        {
+          "name": "careful",
+          "probability": 0
+        },
+        {
+          "name": "superset-plugins",
+          "probability": 0
+        },
+        {
+          "name": "academy-guide",
+          "probability": 0
+        }
+      ],
+      "gate": 0.7399999999999999,
+      "winner": "internal-comms",
+      "fits": {
+        "internal-comms": 0.84,
+        "superset-10x": 0.01,
+        "careful": 0.03
+      },
+      "ms1": 826,
+      "ms2": 315,
+      "tokens1": 16341,
+      "tokens2": 1519
+    },
+    {
+      "text": "what time is it in tokyo",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "discernment-nudge",
+          "probability": 0.41000000000000003
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.11
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.09999999999999999
+        },
+        {
+          "name": "browse",
+          "probability": 0.09
+        },
+        {
+          "name": "superset-browser",
+          "probability": 0.09
+        }
+      ],
+      "gate": 0.44333333333333336,
+      "winner": "template-skill",
+      "fits": {
+        "discernment-nudge": 0.07,
+        "template-skill": 0.1,
+        "find-skills": 0.03
+      },
+      "ms1": 1201,
+      "ms2": 330,
+      "tokens1": 16339,
+      "tokens2": 1350
+    },
+    {
+      "text": "implement binary search in go",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "verify-before-done",
+          "probability": 0.26
+        },
+        {
+          "name": "discernment-nudge",
+          "probability": 0.2
+        },
+        {
+          "name": "codex",
+          "probability": 0.16
+        },
+        {
+          "name": "full-output-enforcement",
+          "probability": 0.12
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.060000000000000005
+        }
+      ],
+      "gate": 0.12666666666666668,
+      "winner": "verify-before-done",
+      "fits": {
+        "verify-before-done": 0.22,
+        "discernment-nudge": 0.07,
+        "codex": 0.1
+      },
+      "ms1": 685,
+      "ms2": 388,
+      "tokens1": 16337,
+      "tokens2": 1772
+    },
+    {
+      "text": "thanks that worked",
+      "gold": null,
+      "ranked": [
+        {
+          "name": "discernment-nudge",
+          "probability": 0.39
+        },
+        {
+          "name": "template-skill",
+          "probability": 0.24000000000000002
+        },
+        {
+          "name": "find-skills",
+          "probability": 0.06999999999999999
+        },
+        {
+          "name": "context-restore",
+          "probability": 0.060000000000000005
+        },
+        {
+          "name": "context-save",
+          "probability": 0.060000000000000005
+        }
+      ],
+      "gate": 0.21333333333333335,
+      "winner": "template-skill",
+      "fits": {
+        "discernment-nudge": 0.15,
+        "template-skill": 0.16,
+        "find-skills": 0.08
+      },
+      "ms1": 666,
+      "ms2": 298,
+      "tokens1": 16335,
+      "tokens2": 1346
+    }
+  ],
+  "reruns": [
+    [
+      {
+        "text": "review my PR before I merge it",
+        "gold": "review",
+        "ranked": [
+          {
+            "name": "review",
+            "probability": 1
+          },
+          {
+            "name": "qa",
+            "probability": 0
+          },
+          {
+            "name": "modern-python",
+            "probability": 0
+          },
+          {
+            "name": "validate-idea",
+            "probability": 0
+          },
+          {
+            "name": "superset-doctor",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7533333333333333,
+        "winner": "review",
+        "fits": {
+          "review": 0.98,
+          "qa": 0.26,
+          "modern-python": 0.06
+        },
+        "ms1": 855,
+        "ms2": 381,
+        "tokens1": 16339,
+        "tokens2": 1685
+      },
+      {
+        "text": "can you look over the diff on this branch against main and tell me if anything is unsafe before landing",
+        "gold": "review",
+        "ranked": [
+          {
+            "name": "review",
+            "probability": 1
+          },
+          {
+            "name": "landing-report",
+            "probability": 0
+          },
+          {
+            "name": "benchmark",
+            "probability": 0
+          },
+          {
+            "name": "saasify",
+            "probability": 0
+          },
+          {
+            "name": "brand-guidelines",
+            "probability": 0
+          }
+        ],
+        "gate": 0.71,
+        "winner": "review",
+        "fits": {
+          "review": 0.97,
+          "landing-report": 0.03,
+          "benchmark": 0.02
+        },
+        "ms1": 392,
+        "ms2": 326,
+        "tokens1": 16352,
+        "tokens2": 1723
+      },
+      {
+        "text": "ship it: merge base, run tests, bump the version and open the PR",
+        "gold": "ship",
+        "ranked": [
+          {
+            "name": "ship",
+            "probability": 1
+          },
+          {
+            "name": "plan-design-review",
+            "probability": 0
+          },
+          {
+            "name": "orbital-hud-motion",
+            "probability": 0
+          },
+          {
+            "name": "plan-ceo-review",
+            "probability": 0
+          },
+          {
+            "name": "make-pdf",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8933333333333332,
+        "winner": "ship",
+        "fits": {
+          "ship": 0.94,
+          "plan-design-review": 0.02,
+          "orbital-hud-motion": 0.01
+        },
+        "ms1": 734,
+        "ms2": 318,
+        "tokens1": 16348,
+        "tokens2": 1661
+      },
+      {
+        "text": "merge the PR, wait for CI and the deploy, then check production is fine",
+        "gold": "land-and-deploy",
+        "ranked": [
+          {
+            "name": "land-and-deploy",
+            "probability": 1
+          },
+          {
+            "name": "find-skills",
+            "probability": 0
+          },
+          {
+            "name": "setup-gbrain",
+            "probability": 0
+          },
+          {
+            "name": "validate-idea",
+            "probability": 0
+          },
+          {
+            "name": "review",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8933333333333332,
+        "winner": "land-and-deploy",
+        "fits": {
+          "land-and-deploy": 0.96,
+          "find-skills": 0.07,
+          "setup-gbrain": 0.01
+        },
+        "ms1": 700,
+        "ms2": 329,
+        "tokens1": 16348,
+        "tokens2": 1577
+      },
+      {
+        "text": "we just deployed, watch the live site for a few minutes for console errors or perf regressions",
+        "gold": "canary",
+        "ranked": [
+          {
+            "name": "canary",
+            "probability": 1
+          },
+          {
+            "name": "superset-10x",
+            "probability": 0
+          },
+          {
+            "name": "careful",
+            "probability": 0
+          },
+          {
+            "name": "superset-plugins",
+            "probability": 0
+          },
+          {
+            "name": "academy-guide",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7666666666666666,
+        "winner": "canary",
+        "fits": {
+          "canary": 0.96,
+          "superset-10x": 0.02,
+          "careful": 0.11
+        },
+        "ms1": 453,
+        "ms2": 394,
+        "tokens1": 16352,
+        "tokens2": 1632
+      },
+      {
+        "text": "go through my web app, find bugs and fix them",
+        "gold": "qa",
+        "ranked": [
+          {
+            "name": "qa",
+            "probability": 1
+          },
+          {
+            "name": "blender-rendering",
+            "probability": 0
+          },
+          {
+            "name": "worktrunk",
+            "probability": 0
+          },
+          {
+            "name": "landing-report",
+            "probability": 0
+          },
+          {
+            "name": "design-review",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8633333333333333,
+        "winner": "qa",
+        "fits": {
+          "qa": 0.97,
+          "blender-rendering": 0.01,
+          "worktrunk": 0.03
+        },
+        "ms1": 658,
+        "ms2": 389,
+        "tokens1": 16343,
+        "tokens2": 1858
+      },
+      {
+        "text": "test the web app systematically and give me a written report of what is broken, do not fix anything",
+        "gold": "qa-only",
+        "ranked": [
+          {
+            "name": "qa-only",
+            "probability": 0.99
+          },
+          {
+            "name": "webapp-testing",
+            "probability": 0.01
+          },
+          {
+            "name": "autoplan",
+            "probability": 0
+          },
+          {
+            "name": "claude-api",
+            "probability": 0
+          },
+          {
+            "name": "orbital-hud-motion",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8466666666666667,
+        "winner": "qa-only",
+        "fits": {
+          "qa-only": 0.98,
+          "webapp-testing": 0.79,
+          "autoplan": 0.08
+        },
+        "ms1": 414,
+        "ms2": 309,
+        "tokens1": 16352,
+        "tokens2": 1697
+      },
+      {
+        "text": "open https://example.com in the headless browser, click the pricing link and tell me what the page says",
+        "gold": "browse",
+        "ranked": [
+          {
+            "name": "browse",
+            "probability": 0.52
+          },
+          {
+            "name": "superset-browser",
+            "probability": 0.41000000000000003
+          },
+          {
+            "name": "gstack",
+            "probability": 0.07
+          },
+          {
+            "name": "qa",
+            "probability": 0
+          },
+          {
+            "name": "modern-python",
+            "probability": 0
+          }
+        ],
+        "gate": 0.79,
+        "winner": "browse",
+        "fits": {
+          "browse": 0.95,
+          "superset-browser": 0.93,
+          "gstack": 0.92
+        },
+        "ms1": 869,
+        "ms2": 334,
+        "tokens1": 16355,
+        "tokens2": 1763
+      },
+      {
+        "text": "check whether this PR made page load or web vitals worse compared to main",
+        "gold": "benchmark",
+        "ranked": [
+          {
+            "name": "benchmark",
+            "probability": 1
+          },
+          {
+            "name": "office-hours",
+            "probability": 0
+          },
+          {
+            "name": "reference-analysis-validator",
+            "probability": 0
+          },
+          {
+            "name": "health",
+            "probability": 0
+          },
+          {
+            "name": "verify-before-done",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7999999999999999,
+        "winner": "benchmark",
+        "fits": {
+          "benchmark": 0.96,
+          "office-hours": 0.01,
+          "reference-analysis-validator": 0.01
+        },
+        "ms1": 406,
+        "ms2": 351,
+        "tokens1": 16347,
+        "tokens2": 1823
+      },
+      {
+        "text": "give me a code quality dashboard: run the type checker, linter and tests and summarise",
+        "gold": "health",
+        "ranked": [
+          {
+            "name": "health",
+            "probability": 1
+          },
+          {
+            "name": "plan-design-review",
+            "probability": 0
+          },
+          {
+            "name": "imagegen-frontend-mobile",
+            "probability": 0
+          },
+          {
+            "name": "pdf",
+            "probability": 0
+          },
+          {
+            "name": "blender-rendering",
+            "probability": 0
+          }
+        ],
+        "gate": 0.82,
+        "winner": "health",
+        "fits": {
+          "health": 0.94,
+          "plan-design-review": 0.02,
+          "imagegen-frontend-mobile": 0.01
+        },
+        "ms1": 466,
+        "ms2": 352,
+        "tokens1": 16352,
+        "tokens2": 1743
+      },
+      {
+        "text": "the login endpoint sometimes returns 500 and I can't figure out why, dig into the root cause",
+        "gold": "investigate",
+        "ranked": [
+          {
+            "name": "investigate",
+            "probability": 1
+          },
+          {
+            "name": "blender-rendering",
+            "probability": 0
+          },
+          {
+            "name": "clean-space",
+            "probability": 0
+          },
+          {
+            "name": "landing-report",
+            "probability": 0
+          },
+          {
+            "name": "design-review",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7266666666666666,
+        "winner": "investigate",
+        "fits": {
+          "investigate": 0.98,
+          "blender-rendering": 0.01,
+          "clean-space": 0.01
+        },
+        "ms1": 698,
+        "ms2": 322,
+        "tokens1": 16354,
+        "tokens2": 1746
+      },
+      {
+        "text": "do a weekly engineering retro from our commit history",
+        "gold": "retro",
+        "ranked": [
+          {
+            "name": "retro",
+            "probability": 1
+          },
+          {
+            "name": "wireframe-to-3d",
+            "probability": 0
+          },
+          {
+            "name": "design-taste-frontend",
+            "probability": 0
+          },
+          {
+            "name": "investigate",
+            "probability": 0
+          },
+          {
+            "name": "context-save",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7966666666666665,
+        "winner": "retro",
+        "fits": {
+          "retro": 0.97,
+          "wireframe-to-3d": 0.01,
+          "design-taste-frontend": 0.02
+        },
+        "ms1": 454,
+        "ms2": 359,
+        "tokens1": 16341,
+        "tokens2": 1736
+      }
+    ],
+    [
+      {
+        "text": "review my PR before I merge it",
+        "gold": "review",
+        "ranked": [
+          {
+            "name": "review",
+            "probability": 1
+          },
+          {
+            "name": "algorithmic-art",
+            "probability": 0
+          },
+          {
+            "name": "document-release",
+            "probability": 0
+          },
+          {
+            "name": "modern-python",
+            "probability": 0
+          },
+          {
+            "name": "closed-surface-uv-coverage",
+            "probability": 0
+          }
+        ],
+        "gate": 0.75,
+        "winner": "review",
+        "fits": {
+          "review": 0.98,
+          "algorithmic-art": 0.01,
+          "document-release": 0.03
+        },
+        "ms1": 960,
+        "ms2": 318,
+        "tokens1": 16339,
+        "tokens2": 1591
+      },
+      {
+        "text": "can you look over the diff on this branch against main and tell me if anything is unsafe before landing",
+        "gold": "review",
+        "ranked": [
+          {
+            "name": "review",
+            "probability": 1
+          },
+          {
+            "name": "verify-before-done",
+            "probability": 0
+          },
+          {
+            "name": "reference-analysis-validator",
+            "probability": 0
+          },
+          {
+            "name": "health",
+            "probability": 0
+          },
+          {
+            "name": "image-to-code",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7333333333333334,
+        "winner": "review",
+        "fits": {
+          "review": 0.97,
+          "verify-before-done": 0.74,
+          "reference-analysis-validator": 0.02
+        },
+        "ms1": 513,
+        "ms2": 391,
+        "tokens1": 16352,
+        "tokens2": 1480
+      },
+      {
+        "text": "ship it: merge base, run tests, bump the version and open the PR",
+        "gold": "ship",
+        "ranked": [
+          {
+            "name": "ship",
+            "probability": 1
+          },
+          {
+            "name": "gsap",
+            "probability": 0
+          },
+          {
+            "name": "canary",
+            "probability": 0
+          },
+          {
+            "name": "scrollcraft",
+            "probability": 0
+          },
+          {
+            "name": "unfreeze",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8933333333333332,
+        "winner": "ship",
+        "fits": {
+          "ship": 0.93,
+          "gsap": 0.01,
+          "canary": 0.02
+        },
+        "ms1": 707,
+        "ms2": 334,
+        "tokens1": 16348,
+        "tokens2": 1669
+      },
+      {
+        "text": "merge the PR, wait for CI and the deploy, then check production is fine",
+        "gold": "land-and-deploy",
+        "ranked": [
+          {
+            "name": "land-and-deploy",
+            "probability": 1
+          },
+          {
+            "name": "slack-gif-creator",
+            "probability": 0
+          },
+          {
+            "name": "design-html",
+            "probability": 0
+          },
+          {
+            "name": "website-to-hyperframes",
+            "probability": 0
+          },
+          {
+            "name": "blender-materials",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8866666666666667,
+        "winner": "land-and-deploy",
+        "fits": {
+          "land-and-deploy": 0.96,
+          "slack-gif-creator": 0.01,
+          "design-html": 0.01
+        },
+        "ms1": 515,
+        "ms2": 312,
+        "tokens1": 16348,
+        "tokens2": 1754
+      },
+      {
+        "text": "we just deployed, watch the live site for a few minutes for console errors or perf regressions",
+        "gold": "canary",
+        "ranked": [
+          {
+            "name": "canary",
+            "probability": 1
+          },
+          {
+            "name": "devex-review",
+            "probability": 0
+          },
+          {
+            "name": "reference-analysis-validator",
+            "probability": 0
+          },
+          {
+            "name": "plan-tune",
+            "probability": 0
+          },
+          {
+            "name": "blender-rendering",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7566666666666667,
+        "winner": "canary",
+        "fits": {
+          "canary": 0.96,
+          "devex-review": 0.15,
+          "reference-analysis-validator": 0.01
+        },
+        "ms1": 446,
+        "ms2": 354,
+        "tokens1": 16352,
+        "tokens2": 1760
+      },
+      {
+        "text": "go through my web app, find bugs and fix them",
+        "gold": "qa",
+        "ranked": [
+          {
+            "name": "qa",
+            "probability": 1
+          },
+          {
+            "name": "investigate",
+            "probability": 0
+          },
+          {
+            "name": "blender-rendering",
+            "probability": 0
+          },
+          {
+            "name": "full-output-enforcement",
+            "probability": 0
+          },
+          {
+            "name": "blender-pro-workflow",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8766666666666666,
+        "winner": "qa",
+        "fits": {
+          "qa": 0.97,
+          "investigate": 0.72,
+          "blender-rendering": 0.01
+        },
+        "ms1": 489,
+        "ms2": 353,
+        "tokens1": 16343,
+        "tokens2": 2002
+      },
+      {
+        "text": "test the web app systematically and give me a written report of what is broken, do not fix anything",
+        "gold": "qa-only",
+        "ranked": [
+          {
+            "name": "qa-only",
+            "probability": 0.99
+          },
+          {
+            "name": "xlsx",
+            "probability": 0.01
+          },
+          {
+            "name": "atlas-uv-fitting",
+            "probability": 0
+          },
+          {
+            "name": "brandkit",
+            "probability": 0
+          },
+          {
+            "name": "internal-comms",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8466666666666667,
+        "winner": "qa-only",
+        "fits": {
+          "qa-only": 0.98,
+          "xlsx": 0.02,
+          "atlas-uv-fitting": 0.01
+        },
+        "ms1": 426,
+        "ms2": 327,
+        "tokens1": 16352,
+        "tokens2": 1858
+      },
+      {
+        "text": "open https://example.com in the headless browser, click the pricing link and tell me what the page says",
+        "gold": "browse",
+        "ranked": [
+          {
+            "name": "browse",
+            "probability": 0.55
+          },
+          {
+            "name": "superset-browser",
+            "probability": 0.37
+          },
+          {
+            "name": "gstack",
+            "probability": 0.08
+          },
+          {
+            "name": "academy-guide",
+            "probability": 0
+          },
+          {
+            "name": "setup-browser-cookies",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7966666666666667,
+        "winner": "browse",
+        "fits": {
+          "browse": 0.95,
+          "superset-browser": 0.94,
+          "gstack": 0.92
+        },
+        "ms1": 623,
+        "ms2": 395,
+        "tokens1": 16355,
+        "tokens2": 1763
+      },
+      {
+        "text": "check whether this PR made page load or web vitals worse compared to main",
+        "gold": "benchmark",
+        "ranked": [
+          {
+            "name": "benchmark",
+            "probability": 1
+          },
+          {
+            "name": "texture-state-animation",
+            "probability": 0
+          },
+          {
+            "name": "setup-deploy",
+            "probability": 0
+          },
+          {
+            "name": "blender-cameras",
+            "probability": 0
+          },
+          {
+            "name": "closed-surface-uv-coverage",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7833333333333333,
+        "winner": "benchmark",
+        "fits": {
+          "benchmark": 0.96,
+          "texture-state-animation": 0.01,
+          "setup-deploy": 0.02
+        },
+        "ms1": 592,
+        "ms2": 460,
+        "tokens1": 16347,
+        "tokens2": 1609
+      },
+      {
+        "text": "give me a code quality dashboard: run the type checker, linter and tests and summarise",
+        "gold": "health",
+        "ranked": [
+          {
+            "name": "health",
+            "probability": 1
+          },
+          {
+            "name": "benchmark",
+            "probability": 0
+          },
+          {
+            "name": "superset-feedback",
+            "probability": 0
+          },
+          {
+            "name": "discernment-nudge",
+            "probability": 0
+          },
+          {
+            "name": "slack-gif-creator",
+            "probability": 0
+          }
+        ],
+        "gate": 0.8233333333333333,
+        "winner": "health",
+        "fits": {
+          "health": 0.94,
+          "benchmark": 0.02,
+          "superset-feedback": 0.01
+        },
+        "ms1": 406,
+        "ms2": 332,
+        "tokens1": 16352,
+        "tokens2": 1582
+      },
+      {
+        "text": "the login endpoint sometimes returns 500 and I can't figure out why, dig into the root cause",
+        "gold": "investigate",
+        "ranked": [
+          {
+            "name": "investigate",
+            "probability": 1
+          },
+          {
+            "name": "texture-state-animation",
+            "probability": 0
+          },
+          {
+            "name": "setup-deploy",
+            "probability": 0
+          },
+          {
+            "name": "blender-cameras",
+            "probability": 0
+          },
+          {
+            "name": "closed-surface-uv-coverage",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7200000000000001,
+        "winner": "investigate",
+        "fits": {
+          "investigate": 0.98,
+          "texture-state-animation": 0.01,
+          "setup-deploy": 0.02
+        },
+        "ms1": 430,
+        "ms2": 354,
+        "tokens1": 16354,
+        "tokens2": 1656
+      },
+      {
+        "text": "do a weekly engineering retro from our commit history",
+        "gold": "retro",
+        "ranked": [
+          {
+            "name": "retro",
+            "probability": 1
+          },
+          {
+            "name": "gsap",
+            "probability": 0
+          },
+          {
+            "name": "scrollcraft",
+            "probability": 0
+          },
+          {
+            "name": "canary",
+            "probability": 0
+          },
+          {
+            "name": "redesign-existing-projects",
+            "probability": 0
+          }
+        ],
+        "gate": 0.7933333333333333,
+        "winner": "retro",
+        "fits": {
+          "retro": 0.97,
+          "gsap": 0.01,
+          "scrollcraft": 0.01
+        },
+        "ms1": 639,
+        "ms2": 304,
+        "tokens1": 16341,
+        "tokens2": 1878
+      }
+    ]
+  ]
+}

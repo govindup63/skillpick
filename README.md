@@ -175,6 +175,40 @@ Support was verified against each agent's official docs on 2026-09-20. Hook
 APIs move fast; if one of these stops working, `skillpick doctor` shows which
 files are wired and `SKILLPICK_DEBUG=1` traces the hook.
 
+## Benchmark
+
+Measured on 2026-09-20 against a real machine with 140 skills visible and 85
+labeled requests (60 covered by exactly one skill, 25 covered by none). Full
+tables, the request set, and every raw probability are in
+[`bench/RESULTS.md`](bench/RESULTS.md).
+
+| Metric | Result |
+| --- | --- |
+| Gold skill ranked first in call 1, out of 140 | 95.0% |
+| Gold skill reaches the top-3 shortlist | 100% |
+| Final suggestion correct on covered requests | 95.0% (57/60) |
+| Wrong skill suggested on covered requests | 1.7% (1/60) |
+| Needless suggestion on uncovered requests | 36.0% (9/25), of which about half are defensible |
+| Same suggestion across three repeat runs | 100% (24/24) |
+| Latency, both calls, p50 / p95 | 810 ms / 1784 ms |
+| Cost per prompt | $0.00076 (18k input tokens) |
+
+The two quiet misses are style-only design prompts ("clean editorial settings
+screen") that the gate scored as not needing action on the user's system. The
+threshold sweep in the results file shows gate 0.20 recovers both without
+adding wrong picks; that is the first knob to try if your skills are mostly
+design or writing guidance rather than procedures.
+
+Run it on your own roster from any project directory:
+
+```bash
+bun run bench          # writes bench/results.json, prints the Markdown report
+```
+
+Edit `bench/requests.json` to use your own skills as gold labels. The
+script makes both calls for every request so the threshold sweep needs no
+extra API calls.
+
 ## Known limits
 
 - **Nearest neighbour wins when nothing fits.** If you ask for something the
