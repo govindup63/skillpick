@@ -10,6 +10,34 @@ Default change: the shipped `fitsThreshold` moved from 0.30 to 0.50 after the fi
 
 Run on 2026-09-20 with model `jev-latest`, thresholds gate 0.3 / fits 0.5.
 
+## How to read the metrics
+
+The 85 requests split into two groups.
+
+**Covered (60).** Each has a label naming the one skill that should fire, for
+example "free up some disk space on my mac" is labeled clean-space. Every
+covered request lands in exactly one of three buckets: correct (skillpick
+suggested the labeled skill), wrong (it suggested a different skill), or quiet
+(it suggested nothing). Wrong is the costliest bucket, because a confident bad
+hint can push the agent off a path it would have found alone. Quiet costs
+less, since the agent still has its full skill list.
+
+**Uncovered (25).** Written so that no installed skill applies: everyday
+requests, general coding with no special procedure, and tasks the roster has
+no skill for, such as posting to Mastodon when only an X skill exists. The
+right answer is "no installed skill appears relevant". A needless suggestion is
+any skill suggested for one of these. It happens because the first call is a
+pick-one question, so something always ranks first, and only the gate
+questions and the second-call fit check stand between that nearest neighbour
+and the suggestion. On a normal day most prompts are uncovered, so this is
+the number to watch.
+
+**Consistency** re-runs 12 covered requests three times and checks whether the
+final suggestion and the underlying probabilities stay the same.
+
+**Latency** is measured from the hook's point of view: p50 is the median, p95
+means one prompt in twenty is slower than this.
+
 ## Accuracy
 
 | Metric | Result |
