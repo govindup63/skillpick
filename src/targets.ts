@@ -24,6 +24,8 @@ export interface Target {
   install(): void;
   uninstall(): boolean;
   installed(): boolean;
+  // A skillpick entry whose cli.ts no longer exists, e.g. the clone was moved.
+  stalePath(): string | undefined;
 }
 
 function readJson(file: string): Record<string, unknown> {
@@ -36,9 +38,19 @@ function writeJson(file: string, data: unknown) {
   writeFileSync(file, JSON.stringify(data, null, 2) + "\n");
 }
 
+function commandsOf(entry: HookEntry): string[] {
+  return [entry.command, ...(entry.hooks ?? []).map((h) => h.command)].filter((c): c is string => typeof c === "string");
+}
+
 function isOurs(entry: HookEntry): boolean {
-  const commands = [entry.command, ...(entry.hooks ?? []).map((h) => h.command)];
-  return commands.some((c) => typeof c === "string" && c.includes(CLI));
+  return commandsOf(entry).some((c) => c.includes(CLI));
+}
+
+const CLI_PATH_RE = /"([^"]*skillpick[^"]*cli\.ts)"/;
+
+function staleCliPath(text: string): string | undefined {
+  const path = text.match(CLI_PATH_RE)?.[1];
+  return path && path !== CLI && !existsSync(path) ? path : undefined;
 }
 
 // Claude Code, Codex, Gemini CLI and Droid all keep an array of matcher
@@ -85,6 +97,15 @@ function jsonHookTarget(opts: {
     installed() {
       return events(readJson(opts.file), false)?.[opts.event]?.some(isOurs) ?? false;
     },
+    stalePath() {
+      for (const entry of events(readJson(opts.file), false)?.[opts.event] ?? []) {
+        for (const command of commandsOf(entry)) {
+          const stale = staleCliPath(command);
+          if (stale) return stale;
+        }
+      }
+      return undefined;
+    },
   };
 }
 
@@ -110,6 +131,9 @@ function pluginTarget(opts: { key: string; name: string; file: string; adapter: 
     },
     installed() {
       return existsSync(opts.file) && readFileSync(opts.file, "utf8").includes(CLI);
+    },
+    stalePath() {
+      return existsSync(opts.file) ? staleCliPath(readFileSync(opts.file, "utf8")) : undefined;
     },
   };
 }

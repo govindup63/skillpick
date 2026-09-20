@@ -7,6 +7,7 @@ import { formatHookOutput, HOOK_FORMATS, type HookFormat } from "./hook-format.t
 import { findTargets, TARGETS, type Target } from "./targets.ts";
 
 const MIN_PROMPT_CHARS = 12;
+const MIN_USEFUL_ROSTER = 8;
 
 function usage(): never {
   console.log(`skillpick - pick the right agent skill for a prompt with TypeSafe's Jev
@@ -26,7 +27,7 @@ Environment:
   TYPESAFE_API_KEY          API key (overrides the config file)
   SKILLPICK_DISABLED=1      make the hook a no-op
   SKILLPICK_SKILL_DIRS      extra skill directories, colon separated
-  SKILLPICK_GATE_THRESHOLD  default 0.30   SKILLPICK_FITS_THRESHOLD  default 0.30
+  SKILLPICK_GATE_THRESHOLD  default 0.30   SKILLPICK_FITS_THRESHOLD  default 0.50
   SKILLPICK_SHORTLIST       default 3      SKILLPICK_EXCERPT_CHARS   default 700`);
   process.exit(1);
 }
@@ -136,7 +137,7 @@ function selectTargets(args: string[]): Target[] {
 function cmdInstall(args: string[]) {
   for (const target of selectTargets(args)) {
     target.install();
-    const note = target.status === "experimental" ? " (experimental, see README)" : "";
+    const note = target.status === "experimental" ? " (experimental: not yet verified against a live agent, see README)" : "";
     console.log(`${target.name}: installed -> ${target.file}${note}`);
   }
   console.log("Restart the agent for it to take effect. Codex and Gemini ask you to review and trust the hook once.");
@@ -167,8 +168,12 @@ async function cmdDoctor() {
   console.log(`API key:   ${config.apiKey ? "found" : "missing (run `skillpick set-key <key>`)"}`);
   console.log(`model:     ${config.model}`);
   console.log(`roster:    ${skills.length} skills from ${process.cwd()}`);
+  if (skills.length && skills.length < MIN_USEFUL_ROSTER) {
+    console.log(`warning:   only ${skills.length} skills visible. With few options the nearest one wins even when nothing fits; consider a higher SKILLPICK_FITS_THRESHOLD.`);
+  }
   for (const target of TARGETS) {
-    const state = target.installed() ? "installed" : "not installed";
+    const stale = target.stalePath();
+    const state = stale ? `STALE -> ${stale}` : target.installed() ? "installed" : "not installed";
     console.log(`hook:      ${target.name.padEnd(14)} ${state.padEnd(14)} ${target.file}`);
   }
   console.log(`disabled:  ${config.disabled}`);

@@ -49,7 +49,7 @@ export function loadConfig(): Config {
     shortlist: envNumber("SKILLPICK_SHORTLIST", file.shortlist ?? 3),
     excerptChars: envNumber("SKILLPICK_EXCERPT_CHARS", file.excerptChars ?? 700),
     gateThreshold: envNumber("SKILLPICK_GATE_THRESHOLD", file.gateThreshold ?? 0.3),
-    fitsThreshold: envNumber("SKILLPICK_FITS_THRESHOLD", file.fitsThreshold ?? 0.3),
+    fitsThreshold: envNumber("SKILLPICK_FITS_THRESHOLD", file.fitsThreshold ?? 0.5),
     extraDirs: [...(file.extraDirs ?? []), ...extraFromEnv],
     disabled: process.env.SKILLPICK_DISABLED === "1",
   };

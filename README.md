@@ -47,7 +47,7 @@ needless loads from 9.8% to 4.0%.
 3. **Call 2: read the top three properly.** A second Choice over the shortlist,
    this time with each skill's full description plus 700 characters of its
    body, and one Noul per candidate asking whether it does the specific thing
-   requested. If the best of those is under 0.30, nothing is suggested.
+   requested. If the best of those is under 0.50, nothing is suggested.
 4. **Inject one line.** The winner, or "no installed skill appears relevant",
    goes into the agent's context via its prompt-submit hook. The roster in the
    system prompt is untouched, so prefix caching still works.
@@ -114,16 +114,18 @@ Environment variables win over `~/.config/skillpick/config.json`.
 | `SKILLPICK_DISABLED=1` | | | Hook becomes a no-op |
 | `SKILLPICK_MODEL` | `model` | `jev-latest` | Pin a version such as `jev-1.13.0` once you have tuned thresholds |
 | `SKILLPICK_GATE_THRESHOLD` | `gateThreshold` | `0.30` | Below this, the prompt is judged not to need a skill |
-| `SKILLPICK_FITS_THRESHOLD` | `fitsThreshold` | `0.30` | Below this, no shortlisted skill fits well enough |
+| `SKILLPICK_FITS_THRESHOLD` | `fitsThreshold` | `0.50` | Below this, no shortlisted skill fits well enough |
 | `SKILLPICK_SHORTLIST` | `shortlist` | `3` | Candidates carried into the second call |
 | `SKILLPICK_EXCERPT_CHARS` | `excerptChars` | `700` | Body characters each candidate brings to the second call |
 | `SKILLPICK_SKILL_DIRS` | `extraDirs` | | Extra skill directories, colon separated (array in the config file) |
 | `SKILLPICK_DEBUG=1` | | | Hook prints the verbose trace to stderr (visible in Claude Code's debug log) |
 
-The thresholds come from the cookbook. They were tuned on Hermes skills and
-Haiku 4.5, not on your roster. If skillpick suggests too eagerly, raise
-`SKILLPICK_FITS_THRESHOLD`; if it stays quiet on prompts that clearly need a
-skill, lower `SKILLPICK_GATE_THRESHOLD`.
+The gate threshold comes from the cookbook; the fits threshold was raised
+from 0.30 to 0.50 after the [benchmark](#benchmark) below. If skillpick
+suggests too eagerly, raise `SKILLPICK_FITS_THRESHOLD`; if it stays quiet on
+prompts that clearly need a skill, lower `SKILLPICK_GATE_THRESHOLD`. With a
+small roster (under about eight skills) the nearest skill tends to win even
+when nothing fits, so start higher; `skillpick doctor` warns about this.
 
 ## Where skills are found
 
@@ -159,17 +161,18 @@ Add more with `SKILLPICK_SKILL_DIRS` or `extraDirs`.
 | Codex CLI | `--codex` | Supported | Same contract as Claude Code, in `~/.codex/hooks.json`. Codex asks you to review and trust the hook once. |
 | Gemini CLI | `--gemini` | Supported | `BeforeAgent` hook in `~/.gemini/settings.json`, same output shape with a different event name. Gemini prompts once for project hooks; user hooks run directly. |
 | Factory Droid | `--droid` | Supported | `UserPromptSubmit` in `~/.factory/hooks.json` (events at the top level, no `hooks` wrapper). |
-| OpenCode | `--opencode` | Supported | A plugin at `~/.config/opencode/plugins/skillpick.ts` that handles `chat.message` and appends a synthetic text part. |
-| Amp | `--amp` | Supported | A plugin at `~/.config/amp/plugins/skillpick.ts` that handles `agent.start` and returns a hidden context message. Run `plugins: reload` in Amp afterwards. |
-| GitHub Copilot CLI | `--copilot` | Experimental | Command hooks on `userPromptSubmitted` have their output dropped by design. skillpick registers on `userPromptTransformed` and returns `modifiedTransformedPrompt` instead. The docs do not say whether command hooks are honoured there, only that SDK hooks are. Untested. |
+| OpenCode | `--opencode` | Written to the plugin API, not yet exercised live | A plugin at `~/.config/opencode/plugins/skillpick.ts` that handles `chat.message` and appends a synthetic text part. |
+| Amp | `--amp` | Written to the plugin API, not yet exercised live | A plugin at `~/.config/amp/plugins/skillpick.ts` that handles `agent.start` and returns a hidden context message. Run `plugins: reload` in Amp afterwards. |
+| GitHub Copilot CLI | `--copilot` | Experimental, untested | Command hooks on `userPromptSubmitted` have their output dropped by design. skillpick registers on `userPromptTransformed` and returns `modifiedTransformedPrompt` instead. The docs do not say whether command hooks are honoured there, only that SDK hooks are. Not verified against a live Copilot CLI; please report either way. |
 | Cursor | none | Not possible today | `beforeSubmitPrompt` can only allow or block. There is no field for adding context on that event (only on `sessionStart` and `postToolUse`). Feature requests are open on the Cursor forum. |
 | Windsurf / Cascade | none | Not possible today | `pre_user_prompt` can only block; stdout is never shown to the model. |
 | Kimi Code CLI | none | Not possible today | The docs say `UserPromptSubmit` stdout is added to context, but the current source only acts on a block decision and never reads stdout. |
 
-`--all` installs every supported target. Add an experimental one explicitly:
-`skillpick install --all --copilot`. Install writes absolute paths to your `bun`
-binary and to `src/cli.ts`, so keep the clone where it is or run `install` again
-after moving it.
+`--all` installs every non-experimental target. Add an experimental one
+explicitly: `skillpick install --all --copilot`. Install writes absolute paths
+to your `bun` binary and to `src/cli.ts`, so keep the clone where it is. If you
+move it, `skillpick doctor` reports the hook as STALE with the old path; run
+`install` again from the new location.
 
 Support was verified against each agent's official docs on 2026-09-20. Hook
 APIs move fast; if one of these stops working, `skillpick doctor` shows which
@@ -184,20 +187,22 @@ tables, the request set, and every raw probability are in
 
 | Metric | Result |
 | --- | --- |
-| Gold skill ranked first in call 1, out of 140 | 95.0% |
+| Gold skill ranked first in call 1, out of 140 | 96.7% |
 | Gold skill reaches the top-3 shortlist | 100% |
-| Final suggestion correct on covered requests | 95.0% (57/60) |
-| Wrong skill suggested on covered requests | 1.7% (1/60) |
-| Needless suggestion on uncovered requests | 36.0% (9/25), of which about half are defensible |
+| Final suggestion correct on covered requests | 93.3% (56/60) |
+| Wrong skill suggested on covered requests | 3.3% (2/60), both between near-duplicate skills |
+| Needless suggestion on uncovered requests | 24.0% (6/25), of which half are defensible |
 | Same suggestion across three repeat runs | 100% (24/24) |
-| Latency, both calls, p50 / p95 | 810 ms / 1784 ms |
+| Latency, both calls, p50 / p95 | 805 ms / 1812 ms |
 | Cost per prompt | $0.00076 (18k input tokens) |
 
 The two quiet misses are style-only design prompts ("clean editorial settings
 screen") that the gate scored as not needing action on the user's system. The
 threshold sweep in the results file shows gate 0.20 recovers both without
 adding wrong picks; that is the first knob to try if your skills are mostly
-design or writing guidance rather than procedures.
+design or writing guidance rather than procedures. The two wrong picks are
+between skills whose descriptions overlap almost entirely; merging those on
+your roster helps more than any threshold.
 
 Run it on your own roster from any project directory:
 
