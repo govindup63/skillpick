@@ -31,6 +31,33 @@ function readFileConfig(): FileConfig {
   return JSON.parse(readFileSync(CONFIG_FILE, "utf8")) as FileConfig;
 }
 
+// SKILLPICK_SKILL_DIRS is a path list, separated the way the platform
+// separates PATH: ":" on macOS and Linux, ";" on Windows, where a bare colon
+// belongs to the drive letter in "D:\skills". Colons still separate on
+// Windows where they cannot be a drive letter, so a list copied from the
+// docs keeps working.
+export function splitSkillDirs(raw: string, platform: string = process.platform): string[] {
+  if (platform !== "win32") return raw.split(":").filter(Boolean);
+  return raw.split(";").flatMap(splitOffDriveLetters).filter(Boolean);
+}
+
+function splitOffDriveLetters(part: string): string[] {
+  const dirs: string[] = [];
+  let current = "";
+  for (let i = 0; i < part.length; i++) {
+    const char = part[i]!;
+    const isDriveColon = /^[A-Za-z]$/.test(current) && /^[\\/]/.test(part[i + 1] ?? "");
+    if (char === ":" && !isDriveColon) {
+      dirs.push(current);
+      current = "";
+      continue;
+    }
+    current += char;
+  }
+  dirs.push(current);
+  return dirs;
+}
+
 function envNumber(name: string, fallback: number): number {
   const raw = process.env[name];
   if (raw === undefined || raw === "") return fallback;
@@ -40,9 +67,7 @@ function envNumber(name: string, fallback: number): number {
 
 export function loadConfig(): Config {
   const file = readFileConfig();
-  const extraFromEnv = (process.env.SKILLPICK_SKILL_DIRS ?? "")
-    .split(":")
-    .filter(Boolean);
+  const extraFromEnv = splitSkillDirs(process.env.SKILLPICK_SKILL_DIRS ?? "");
   return {
     apiKey: process.env.TYPESAFE_API_KEY || file.apiKey,
     model: process.env.SKILLPICK_MODEL || file.model || "jev-latest",
