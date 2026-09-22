@@ -117,7 +117,7 @@ Environment variables win over `~/.config/skillpick/config.json`.
 | `SKILLPICK_FITS_THRESHOLD` | `fitsThreshold` | `0.50` | Below this, no shortlisted skill fits well enough |
 | `SKILLPICK_SHORTLIST` | `shortlist` | `3` | Candidates carried into the second call |
 | `SKILLPICK_EXCERPT_CHARS` | `excerptChars` | `700` | Body characters each candidate brings to the second call |
-| `SKILLPICK_SKILL_DIRS` | `extraDirs` | | Extra skill directories, colon separated (array in the config file) |
+| `SKILLPICK_SKILL_DIRS` | `extraDirs` | | Extra skill directories, colon separated, or semicolon separated on Windows, where a drive letter such as `D:\skills` keeps its colon (array in the config file) |
 | `SKILLPICK_DEBUG=1` | | | Hook prints the verbose trace to stderr (visible in Claude Code's debug log) |
 
 The gate threshold comes from the cookbook; the fits threshold was raised
